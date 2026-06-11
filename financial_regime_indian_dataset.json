@@ -1,0 +1,1061 @@
+{
+  "description": "Indian Financial Market Regime Dataset (FY 2015-16 to FY 2025-26)",
+  "source": "Compiled from NSE, RBI, CBDT, SEBI, BSE data",
+  "currency": "INR",
+  "index_primary": "NIFTY 50 (NSE)",
+  "index_secondary": "BSE SENSEX",
+  "volatility_index": "India VIX (NSE)",
+  "rate_benchmark": "RBI Repo Rate",
+  "fiscal_year_note": "India FY runs April 1 to March 31. E.g. FY 2015-16 = Apr 2015 to Mar 2016",
+
+  "regimes": [
+    {
+      "id": 1,
+      "name": "Easing & Reform Cycle",
+      "period": "2015-01-01 to 2018-01-31",
+      "start_date": "2015-01-01",
+      "end_date": "2018-01-31",
+      "characteristics": {
+        "real_rates": "moderately positive (rate cuts amid falling inflation)",
+        "liquidity": "gradually easing (RBI cut repo 175bps from 8% to 6.25%)",
+        "volatility": "low to moderate",
+        "equity_bond_correlation": "negative (typical bull market)",
+        "risk_premia": "compressing"
+      },
+      "macro_context": "Modi government reforms: Make in India, GST prep, demonetisation shock (Nov 2016). RBI adopted formal CPI inflation targeting. FPI inflows strong. Commodity deflation benefited India as net importer.",
+      "key_events": [
+        {
+          "date": "2015-01-15",
+          "event": "RBI surprise rate cut 25bps to 7.75% (off-cycle)"
+        },
+        {
+          "date": "2015-08-24",
+          "event": "Black Monday — Nifty falls 5.9% on China yuan devaluation fears"
+        },
+        {
+          "date": "2016-04-01",
+          "event": "RBI formal CPI inflation targeting framework begins"
+        },
+        {
+          "date": "2016-11-08",
+          "event": "Demonetisation announced — Rs 500/1000 notes scrapped"
+        },
+        {
+          "date": "2017-07-01",
+          "event": "GST (Goods & Services Tax) launched"
+        },
+        { "date": "2017-10-02", "event": "Nifty crosses 10,000 for first time" }
+      ],
+      "metrics": {
+        "nifty50_annual_returns": {
+          "2015": -4.1,
+          "2016": 3.0,
+          "2017": 28.6
+        },
+        "avg_india_vix": 16.5,
+        "repo_rate_range_pct": [6.25, 7.75],
+        "10yr_gsec_avg_pct": 7.4,
+        "inr_usd_range": [63, 68],
+        "gdp_growth_range_pct": [6.9, 8.2]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Tightening & Stress",
+      "period": "2018-02-01 to 2019-03-31",
+      "start_date": "2018-02-01",
+      "end_date": "2019-03-31",
+      "characteristics": {
+        "real_rates": "positive and rising",
+        "liquidity": "tightening (RBI hiked repo 50bps; IL&FS crisis froze NBFC credit)",
+        "volatility": "elevated",
+        "equity_bond_correlation": "positive (both sold off)",
+        "risk_premia": "rising sharply"
+      },
+      "macro_context": "IL&FS default (Sep 2018) triggered an NBFC/shadow-banking credit crunch. Rising oil prices hurt CAD. Rupee hit 74/USD. RBI hiked rates twice. FPI outflows accelerated. Mid/smallcap indices fell 25-40%.",
+      "key_events": [
+        {
+          "date": "2018-02-01",
+          "event": "Budget 2018-19 reintroduces LTCG tax on equities"
+        },
+        { "date": "2018-06-06", "event": "RBI hikes repo 25bps to 6.25%" },
+        {
+          "date": "2018-08-01",
+          "event": "RBI hikes repo another 25bps to 6.50%"
+        },
+        {
+          "date": "2018-09-21",
+          "event": "IL&FS defaults — NBFC credit crisis begins"
+        },
+        {
+          "date": "2018-10-11",
+          "event": "Nifty intraday fall of 3.5%; INR hits 74.5/USD"
+        }
+      ],
+      "metrics": {
+        "nifty50_annual_returns": {
+          "2018": 3.2
+        },
+        "avg_india_vix": 19.2,
+        "repo_rate_range_pct": [6.25, 6.5],
+        "10yr_gsec_avg_pct": 7.8,
+        "inr_usd_range": [63, 74.5],
+        "gdp_growth_range_pct": [6.1, 7.2]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Easing & Pre-COVID Stabilisation",
+      "period": "2019-04-01 to 2020-01-31",
+      "start_date": "2019-04-01",
+      "end_date": "2020-01-31",
+      "characteristics": {
+        "real_rates": "positive but declining",
+        "liquidity": "easing aggressively (RBI cut 135bps in calendar 2019)",
+        "volatility": "low to moderate",
+        "equity_bond_correlation": "negative",
+        "risk_premia": "normalising"
+      },
+      "macro_context": "RBI shifted to accommodative stance and cut repo 5 times. GDP growth slowed sharply to ~4.5% by Q2 FY20 — weakest in 6 years. Corporate tax cut (Sep 2019) boosted markets. Nifty still rose 12% in CY2019.",
+      "key_events": [
+        { "date": "2019-04-04", "event": "RBI cuts repo 25bps to 6.0%" },
+        {
+          "date": "2019-08-07",
+          "event": "RBI cuts repo 35bps (unusual quantum) to 5.40%"
+        },
+        {
+          "date": "2019-09-20",
+          "event": "Corporate tax rate cut — base rate from 30% to 22%"
+        },
+        { "date": "2019-10-04", "event": "RBI cuts repo 25bps to 5.15%" }
+      ],
+      "metrics": {
+        "nifty50_annual_returns": {
+          "2019": 12.0
+        },
+        "avg_india_vix": 14.5,
+        "repo_rate_range_pct": [5.15, 6.0],
+        "10yr_gsec_avg_pct": 6.8,
+        "inr_usd_range": [69, 72],
+        "gdp_growth_range_pct": [4.5, 6.8]
+      }
+    },
+    {
+      "id": 4,
+      "name": "COVID Crash",
+      "period": "2020-02-01 to 2020-03-23",
+      "start_date": "2020-02-01",
+      "end_date": "2020-03-23",
+      "characteristics": {
+        "real_rates": "negative (emergency cuts)",
+        "liquidity": "extreme injection",
+        "volatility": "extreme",
+        "equity_bond_correlation": "positive (crisis correlation)",
+        "risk_premia": "severely elevated"
+      },
+      "macro_context": "Nifty fell ~38% peak-to-trough in 40 days. India VIX surged to 83.6 (all-time high). RBI announced emergency 75bps cut. Nationwide lockdown declared March 25.",
+      "key_events": [
+        { "date": "2020-02-19", "event": "Nifty peak at ~12,201 before crash" },
+        { "date": "2020-03-11", "event": "WHO declares COVID-19 a pandemic" },
+        {
+          "date": "2020-03-13",
+          "event": "Nifty lower circuit triggered — trading halted"
+        },
+        {
+          "date": "2020-03-23",
+          "event": "Nifty bottom ~7,511 (India VIX at 83.6 all-time high)"
+        },
+        { "date": "2020-03-25", "event": "Nationwide lockdown declared" },
+        {
+          "date": "2020-03-27",
+          "event": "RBI emergency repo cut 75bps to 4.40%"
+        }
+      ],
+      "metrics": {
+        "nifty50_period_return_pct": -38.0,
+        "nifty50_annual_returns": {
+          "note": "CY2020 full year was +14.9% due to V-shaped recovery"
+        },
+        "peak_india_vix": 83.6,
+        "repo_rate_range_pct": [4.4, 5.15],
+        "10yr_gsec_avg_pct": 6.2,
+        "inr_usd_range": [71, 76],
+        "gdp_growth_range_pct": [-7.3, -7.3]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Post-COVID V-Shape Recovery",
+      "period": "2020-03-24 to 2021-12-31",
+      "start_date": "2020-03-24",
+      "end_date": "2021-12-31",
+      "characteristics": {
+        "real_rates": "highly negative",
+        "liquidity": "maximal RBI accommodation (repo at 4%)",
+        "volatility": "declining from extreme highs",
+        "equity_bond_correlation": "negative (equity rip, bonds stable)",
+        "risk_premia": "compressed by RBI actions"
+      },
+      "macro_context": "India staged a sharp V-shaped recovery. RBI held repo at 4% through entire period. Retail investor surge (demat accounts doubled). IPO boom. FII inflows surged on global risk-on. Mid and smallcap indices outperformed significantly.",
+      "key_events": [
+        {
+          "date": "2020-04-17",
+          "event": "RBI cuts repo another 40bps to 4.0%"
+        },
+        {
+          "date": "2020-11-03",
+          "event": "Nifty crosses pre-COVID high at 12,025"
+        },
+        {
+          "date": "2021-01-16",
+          "event": "India begins COVID-19 vaccination drive"
+        },
+        {
+          "date": "2021-04-01",
+          "event": "Devastating second COVID wave begins"
+        },
+        {
+          "date": "2021-10-19",
+          "event": "Nifty crosses 18,000 for the first time"
+        },
+        {
+          "date": "2021-11-26",
+          "event": "Omicron variant triggers 3% single-day fall"
+        }
+      ],
+      "metrics": {
+        "nifty50_annual_returns": {
+          "2020": 14.9,
+          "2021": 24.1
+        },
+        "avg_india_vix": 20.5,
+        "repo_rate_range_pct": [4.0, 4.0],
+        "10yr_gsec_avg_pct": 6.1,
+        "inr_usd_range": [72, 76],
+        "gdp_growth_range_pct": [8.7, 9.1]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Tightening / Inflation Shock",
+      "period": "2022-01-01 to 2023-12-31",
+      "start_date": "2022-01-01",
+      "end_date": "2023-12-31",
+      "characteristics": {
+        "real_rates": "negative to positive",
+        "liquidity": "contracting (RBI hiked 250bps in 12 months)",
+        "volatility": "elevated",
+        "equity_bond_correlation": "positive (both fell initially)",
+        "risk_premia": "rising then normalising"
+      },
+      "macro_context": "Russia-Ukraine war spiked commodity/food/energy prices. India CPI peaked at 7.8% (Apr 2022). RBI hiked repo 250bps (from 4% to 6.5%) — fastest cycle in modern RBI history. Despite tightening, Nifty resilient vs global peers (+4.3% in 2022 vs S&P -18%).",
+      "key_events": [
+        {
+          "date": "2022-02-24",
+          "event": "Russia invades Ukraine — commodity shock"
+        },
+        {
+          "date": "2022-05-04",
+          "event": "RBI off-cycle emergency hike 40bps to 4.40%"
+        },
+        { "date": "2022-06-08", "event": "RBI hikes 50bps to 4.90%" },
+        { "date": "2022-09-30", "event": "RBI hikes to 5.90%" },
+        { "date": "2022-12-07", "event": "RBI hikes to 6.25%" },
+        {
+          "date": "2023-02-08",
+          "event": "RBI hikes final 25bps to 6.50% — peak rate"
+        },
+        {
+          "date": "2023-03-10",
+          "event": "Silicon Valley Bank collapse — global contagion fears"
+        },
+        {
+          "date": "2023-09-15",
+          "event": "Nifty crosses 20,000 for the first time"
+        }
+      ],
+      "metrics": {
+        "nifty50_annual_returns": {
+          "2022": 4.3,
+          "2023": 20.0
+        },
+        "avg_india_vix": 15.8,
+        "repo_rate_range_pct": [4.0, 6.5],
+        "10yr_gsec_avg_pct": 7.2,
+        "inr_usd_range": [74, 83.5],
+        "gdp_growth_range_pct": [7.0, 8.2]
+      }
+    },
+    {
+      "id": 7,
+      "name": "Goldilocks / Overvaluation Peak",
+      "period": "2024-01-01 to 2024-09-26",
+      "start_date": "2024-01-01",
+      "end_date": "2024-09-26",
+      "characteristics": {
+        "real_rates": "positive (repo 6.5%, CPI ~5%)",
+        "liquidity": "stable to neutral",
+        "volatility": "historically low",
+        "equity_bond_correlation": "negative",
+        "risk_premia": "extremely compressed (valuations at historical highs)"
+      },
+      "macro_context": "Nifty touched 26,277 all-time high (Sep 26, 2024). Mid and smallcap P/Es stretched. FPI inflows record high in Jan 2024. Lok Sabha elections (Apr-Jun 2024) created short-term volatility. India VIX touched 8-year lows around 11.",
+      "key_events": [
+        {
+          "date": "2024-01-22",
+          "event": "Ram Mandir consecration — markets at new highs"
+        },
+        {
+          "date": "2024-04-19",
+          "event": "Lok Sabha election schedule announced — volatility spike"
+        },
+        {
+          "date": "2024-06-04",
+          "event": "Election results — BJP falls short of majority; Nifty falls 4.7%"
+        },
+        {
+          "date": "2024-07-23",
+          "event": "Budget 2024-25: STCG hiked to 20%, LTCG to 12.5% — markets fall 1.2%"
+        },
+        { "date": "2024-09-26", "event": "Nifty all-time high at 26,277" }
+      ],
+      "metrics": {
+        "nifty50_period_return_pct": 16.2,
+        "avg_india_vix": 13.1,
+        "repo_rate_range_pct": [6.5, 6.5],
+        "10yr_gsec_avg_pct": 7.1,
+        "inr_usd_range": [82.5, 84.5],
+        "nifty_pe_range": [21, 24]
+      }
+    },
+    {
+      "id": 8,
+      "name": "FPI Exodus & RBI Easing Cycle",
+      "period": "2024-09-27 to 2025-04-01",
+      "start_date": "2024-09-27",
+      "end_date": "2025-04-01",
+      "characteristics": {
+        "real_rates": "positive then declining",
+        "liquidity": "easing (RBI begins rate cut cycle Feb 2025)",
+        "volatility": "elevated",
+        "equity_bond_correlation": "slightly positive",
+        "risk_premia": "expanding (FPI outflows, INR under pressure)"
+      },
+      "macro_context": "FPIs sold >₹2.8 lakh crore from Indian equities (Oct 2024 – Feb 2025), one of the largest sustained outflows ever. Nifty fell ~12-15% from peak. RBI cut repo 25bps in Feb 2025 (first cut since May 2020). Strong domestic inflows (SIPs at ₹26,000 cr/month) cushioned the fall.",
+      "key_events": [
+        {
+          "date": "2024-10-01",
+          "event": "FPI selling begins — ₹94,000 cr sold in Oct 2024 alone"
+        },
+        {
+          "date": "2024-11-05",
+          "event": "Trump wins US election — dollar strengthens, EM outflows"
+        },
+        {
+          "date": "2024-12-06",
+          "event": "RBI holds repo at 6.50%; INR hits 84.7/USD"
+        },
+        {
+          "date": "2025-01-27",
+          "event": "Nifty corrects to ~22,800 (-13% from ATH)"
+        },
+        {
+          "date": "2025-02-07",
+          "event": "RBI cuts repo 25bps to 6.25% — first cut since May 2020"
+        },
+        {
+          "date": "2025-02-28",
+          "event": "Sensex falls 1,000 pts in single session; FPI outflows continue"
+        }
+      ],
+      "metrics": {
+        "nifty50_period_return_pct": -12.0,
+        "avg_india_vix": 14.8,
+        "repo_rate_range_pct": [6.25, 6.5],
+        "10yr_gsec_avg_pct": 6.85,
+        "inr_usd_range": [83.5, 87.5],
+        "fpi_net_equity_flow_cr": -280000
+      }
+    },
+    {
+      "id": 9,
+      "name": "Global Tariff Shock & Recovery",
+      "period": "2025-04-02 to 2025-12-31",
+      "start_date": "2025-04-02",
+      "end_date": "2025-12-31",
+      "characteristics": {
+        "real_rates": "declining (RBI cuts aggressively)",
+        "liquidity": "expanding (RBI cut 100bps Apr-Dec 2025)",
+        "volatility": "briefly elevated then declining",
+        "equity_bond_correlation": "negative",
+        "risk_premia": "normalising"
+      },
+      "macro_context": "US Liberation Day tariffs (Apr 2, 2025) caused brief global sell-off. India relatively insulated vs China/EU. RBI cut aggressively through 2025 (cumulative 125bps). Nifty stabilised and recovered. Inflation fell to multi-year lows (~2%). GDP growth remained strong at ~7.3%.",
+      "key_events": [
+        {
+          "date": "2025-04-02",
+          "event": "US Liberation Day tariffs — Nifty falls 1.5% intraday"
+        },
+        {
+          "date": "2025-04-09",
+          "event": "US 90-day tariff pause — Nifty recovers 3.5%"
+        },
+        {
+          "date": "2025-04-09",
+          "event": "RBI cuts repo 25bps to 6.0% (second cut in cycle)"
+        },
+        {
+          "date": "2025-06-06",
+          "event": "RBI cuts 50bps to 5.50% — aggressive easing"
+        },
+        {
+          "date": "2025-12-05",
+          "event": "RBI cuts 25bps to 5.25% — cumulative 125bps cuts FY26"
+        }
+      ],
+      "metrics": {
+        "nifty50_annual_return_cy2025_pct": null,
+        "avg_india_vix": 15.2,
+        "repo_rate_range_pct": [5.25, 6.5],
+        "10yr_gsec_avg_pct": 6.5,
+        "inr_usd_range": [84, 90],
+        "gdp_growth_fy26_pct": 7.3
+      }
+    },
+    {
+      "id": 10,
+      "name": "Current — Stable Growth / Rate Hold",
+      "period": "2026-01-01 to present",
+      "start_date": "2026-01-01",
+      "end_date": "2026-04-13",
+      "characteristics": {
+        "real_rates": "mildly positive",
+        "liquidity": "neutral to slightly accommodative",
+        "volatility": "moderate (India VIX ~18-20)",
+        "equity_bond_correlation": "slightly negative",
+        "risk_premia": "normalising"
+      },
+      "macro_context": "RBI held repo at 5.25% through Feb and Apr 2026 meetings. Inflation at 1.3% (Dec 2025) — well within target. Iran-war risk and global uncertainty complicates rate path. New Income Tax Act 2025 effective Apr 1, 2026. Nifty 20-year rolling CAGR near 10-year low (~10%).",
+      "key_events": [
+        {
+          "date": "2026-02-06",
+          "event": "RBI holds repo at 5.25% — neutral stance"
+        },
+        {
+          "date": "2026-04-01",
+          "event": "New Income Tax Act 2025 comes into effect"
+        },
+        {
+          "date": "2026-04-08",
+          "event": "RBI holds repo at 5.25% — FY27 inflation raised to 4.6%"
+        }
+      ],
+      "metrics": {
+        "current_repo_rate_pct": 5.25,
+        "current_india_vix_approx": 18.85,
+        "10yr_gsec_approx_pct": 6.6,
+        "inr_usd_approx": 86.5,
+        "fy27_gdp_forecast_pct": 6.6
+      }
+    }
+  ],
+
+  "nifty50_annual_returns_calendar_year": {
+    "2015": {
+      "return_pct": -4.1,
+      "note": "China slowdown fears, global risk-off"
+    },
+    "2016": {
+      "return_pct": 3.0,
+      "note": "Demonetisation shock in Nov offset recovery"
+    },
+    "2017": {
+      "return_pct": 28.6,
+      "note": "GST launch, global bull run, reforms optimism"
+    },
+    "2018": {
+      "return_pct": 3.2,
+      "note": "IL&FS crisis, NBFC credit crunch, rate hikes"
+    },
+    "2019": {
+      "return_pct": 12.0,
+      "note": "Rate cuts, corporate tax cut Sep 2019"
+    },
+    "2020": {
+      "return_pct": 14.9,
+      "note": "COVID crash (-38%) then V-shape recovery"
+    },
+    "2021": {
+      "return_pct": 24.1,
+      "note": "Massive liquidity, retail investor boom, IPOs"
+    },
+    "2022": {
+      "return_pct": 4.3,
+      "note": "Rate hikes, but held up vs global markets"
+    },
+    "2023": {
+      "return_pct": 20.0,
+      "note": "Strong domestic growth, rate cycle peaking"
+    },
+    "2024": {
+      "return_pct": 8.8,
+      "note": "ATH in Sep, then FPI sell-off dragged CY returns"
+    },
+    "2025": {
+      "return_pct": null,
+      "note": "Ongoing — RBI easing cycle, tariff volatility, recovery"
+    }
+  },
+
+  "rbi_repo_rate_history": [
+    { "date": "2015-01-15", "rate_pct": 7.75, "action": "cut", "bps": -25 },
+    { "date": "2015-03-04", "rate_pct": 7.5, "action": "cut", "bps": -25 },
+    { "date": "2015-06-02", "rate_pct": 7.25, "action": "cut", "bps": -25 },
+    { "date": "2015-09-29", "rate_pct": 6.75, "action": "cut", "bps": -50 },
+    { "date": "2016-04-05", "rate_pct": 6.5, "action": "cut", "bps": -25 },
+    { "date": "2016-10-04", "rate_pct": 6.25, "action": "cut", "bps": -25 },
+    { "date": "2018-06-06", "rate_pct": 6.5, "action": "hike", "bps": 25 },
+    {
+      "date": "2018-08-01",
+      "rate_pct": 6.5,
+      "action": "hold",
+      "bps": 0,
+      "note": "Effective hold; rate at 6.50"
+    },
+    { "date": "2019-02-07", "rate_pct": 6.25, "action": "cut", "bps": -25 },
+    { "date": "2019-04-04", "rate_pct": 6.0, "action": "cut", "bps": -25 },
+    { "date": "2019-06-06", "rate_pct": 5.75, "action": "cut", "bps": -25 },
+    { "date": "2019-08-07", "rate_pct": 5.4, "action": "cut", "bps": -35 },
+    { "date": "2019-10-04", "rate_pct": 5.15, "action": "cut", "bps": -25 },
+    {
+      "date": "2020-03-27",
+      "rate_pct": 4.4,
+      "action": "cut",
+      "bps": -75,
+      "note": "Emergency COVID cut"
+    },
+    { "date": "2020-05-22", "rate_pct": 4.0, "action": "cut", "bps": -40 },
+    {
+      "date": "2022-05-04",
+      "rate_pct": 4.4,
+      "action": "hike",
+      "bps": 40,
+      "note": "Off-cycle emergency hike"
+    },
+    { "date": "2022-06-08", "rate_pct": 4.9, "action": "hike", "bps": 50 },
+    { "date": "2022-08-05", "rate_pct": 5.4, "action": "hike", "bps": 50 },
+    { "date": "2022-09-30", "rate_pct": 5.9, "action": "hike", "bps": 50 },
+    { "date": "2022-12-07", "rate_pct": 6.25, "action": "hike", "bps": 35 },
+    {
+      "date": "2023-02-08",
+      "rate_pct": 6.5,
+      "action": "hike",
+      "bps": 25,
+      "note": "Peak rate"
+    },
+    {
+      "date": "2025-02-07",
+      "rate_pct": 6.25,
+      "action": "cut",
+      "bps": -25,
+      "note": "First cut since May 2020"
+    },
+    { "date": "2025-04-09", "rate_pct": 6.0, "action": "cut", "bps": -25 },
+    { "date": "2025-06-06", "rate_pct": 5.5, "action": "cut", "bps": -50 },
+    { "date": "2025-08-06", "rate_pct": 5.5, "action": "hold", "bps": 0 },
+    { "date": "2025-10-01", "rate_pct": 5.5, "action": "hold", "bps": 0 },
+    { "date": "2025-12-05", "rate_pct": 5.25, "action": "cut", "bps": -25 },
+    { "date": "2026-02-06", "rate_pct": 5.25, "action": "hold", "bps": 0 },
+    { "date": "2026-04-08", "rate_pct": 5.25, "action": "hold", "bps": 0 }
+  ],
+
+  "tax_slabs": {
+    "note": "India has two parallel tax regimes since FY 2020-21. Old Regime allows deductions (80C, HRA, etc.). New Regime has lower rates but few deductions. New Regime became default from FY 2023-24 onwards. All amounts in INR. Add 4% Health & Education Cess on total tax. Surcharge applies on higher incomes.",
+    "section_87A_rebate": {
+      "old_regime": {
+        "limit_income": 500000,
+        "max_rebate": 12500,
+        "applicable_fy": "FY 2020-21 onwards"
+      },
+      "new_regime_fy2023_24": { "limit_income": 700000, "max_rebate": 25000 },
+      "new_regime_fy2025_26": {
+        "limit_income": 1200000,
+        "max_rebate": 60000,
+        "note": "Budget 2025 — effective zero tax up to ₹12 lakh"
+      }
+    },
+    "standard_deduction_salaried": {
+      "FY2018-19": 40000,
+      "FY2019-20_to_FY2022-23": 50000,
+      "FY2023-24_new_regime": 50000,
+      "FY2024-25_new_regime": 75000,
+      "FY2025-26_new_regime": 75000,
+      "old_regime": 50000
+    },
+
+    "FY2015-16": {
+      "assessment_year": "AY 2016-17",
+      "regime": "single_regime",
+      "slabs_below60": [
+        { "rate_pct": 0, "from": 0, "to": 250000 },
+        { "rate_pct": 10, "from": 250001, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "slabs_60to80": [
+        { "rate_pct": 0, "from": 0, "to": 300000 },
+        { "rate_pct": 10, "from": 300001, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "slabs_above80": [
+        { "rate_pct": 0, "from": 0, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "surcharge": [{ "on_income_above": 10000000, "surcharge_pct": 12 }],
+      "cess_pct": 3,
+      "cess_label": "Education Cess 2% + Secondary & Higher Education Cess 1%"
+    },
+
+    "FY2016-17": {
+      "assessment_year": "AY 2017-18",
+      "regime": "single_regime",
+      "slabs_below60": [
+        { "rate_pct": 0, "from": 0, "to": 250000 },
+        { "rate_pct": 10, "from": 250001, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "slabs_60to80": [
+        { "rate_pct": 0, "from": 0, "to": 300000 },
+        { "rate_pct": 10, "from": 300001, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "slabs_above80": [
+        { "rate_pct": 0, "from": 0, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "special": "Rebate u/s 87A: Rs.5,000 for income ≤ Rs.5 lakh",
+      "surcharge": [{ "on_income_above": 10000000, "surcharge_pct": 15 }],
+      "cess_pct": 3
+    },
+
+    "FY2017-18": {
+      "assessment_year": "AY 2018-19",
+      "regime": "single_regime",
+      "slabs_below60": [
+        { "rate_pct": 0, "from": 0, "to": 250000 },
+        {
+          "rate_pct": 5,
+          "from": 250001,
+          "to": 500000,
+          "note": "Reduced from 10% to 5%"
+        },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "slabs_60to80": [
+        { "rate_pct": 0, "from": 0, "to": 300000 },
+        { "rate_pct": 5, "from": 300001, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "slabs_above80": [
+        { "rate_pct": 0, "from": 0, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "special": "Rebate u/s 87A: Rs.2,500 for income ≤ Rs.3.5 lakh. 10% slab replaced by 5%.",
+      "surcharge": [
+        { "on_income_above": 5000000, "surcharge_pct": 10 },
+        { "on_income_above": 10000000, "surcharge_pct": 15 }
+      ],
+      "cess_pct": 3
+    },
+
+    "FY2018-19": {
+      "assessment_year": "AY 2019-20",
+      "regime": "single_regime",
+      "slabs_below60": [
+        { "rate_pct": 0, "from": 0, "to": 250000 },
+        { "rate_pct": 5, "from": 250001, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "slabs_60to80": [
+        { "rate_pct": 0, "from": 0, "to": 300000 },
+        { "rate_pct": 5, "from": 300001, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "slabs_above80": [
+        { "rate_pct": 0, "from": 0, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "special": "Standard deduction of Rs.40,000 reintroduced for salaried. LTCG on equity reintroduced at 10% above Rs.1 lakh (Budget 2018).",
+      "surcharge": [
+        { "on_income_above": 5000000, "surcharge_pct": 10 },
+        { "on_income_above": 10000000, "surcharge_pct": 15 }
+      ],
+      "cess_pct": 4,
+      "cess_label": "Health & Education Cess 4% (increased from 3%)"
+    },
+
+    "FY2019-20": {
+      "assessment_year": "AY 2020-21",
+      "regime": "single_regime",
+      "slabs_below60": [
+        { "rate_pct": 0, "from": 0, "to": 250000 },
+        { "rate_pct": 5, "from": 250001, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "slabs_60to80": [
+        { "rate_pct": 0, "from": 0, "to": 300000 },
+        { "rate_pct": 5, "from": 300001, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "slabs_above80": [
+        { "rate_pct": 0, "from": 0, "to": 500000 },
+        { "rate_pct": 20, "from": 500001, "to": 1000000 },
+        { "rate_pct": 30, "from": 1000001, "to": null }
+      ],
+      "special": "Rebate u/s 87A Rs.12,500 for income ≤ Rs.5 lakh (effective zero tax). Standard deduction Rs.50,000. Corporate tax cut to 22% (Sep 2019 ordinance).",
+      "surcharge": [
+        { "on_income_above": 5000000, "surcharge_pct": 10 },
+        { "on_income_above": 10000000, "surcharge_pct": 15 },
+        { "on_income_above": 20000000, "surcharge_pct": 25 },
+        { "on_income_above": 50000000, "surcharge_pct": 37 }
+      ],
+      "cess_pct": 4
+    },
+
+    "FY2020-21": {
+      "assessment_year": "AY 2021-22",
+      "regime": "dual_regime_introduced",
+      "old_regime": {
+        "slabs_below60": [
+          { "rate_pct": 0, "from": 0, "to": 250000 },
+          { "rate_pct": 5, "from": 250001, "to": 500000 },
+          { "rate_pct": 20, "from": 500001, "to": 1000000 },
+          { "rate_pct": 30, "from": 1000001, "to": null }
+        ],
+        "rebate_87A": "Rs.12,500 for income ≤ Rs.5 lakh",
+        "standard_deduction": 50000,
+        "allows_80C_HRA_etc": true
+      },
+      "new_regime": {
+        "note": "Introduced in Budget 2020 u/s 115BAC — optional",
+        "slabs_below60": [
+          { "rate_pct": 0, "from": 0, "to": 250000 },
+          { "rate_pct": 5, "from": 250001, "to": 500000 },
+          { "rate_pct": 10, "from": 500001, "to": 750000 },
+          { "rate_pct": 15, "from": 750001, "to": 1000000 },
+          { "rate_pct": 20, "from": 1000001, "to": 1250000 },
+          { "rate_pct": 25, "from": 1250001, "to": 1500000 },
+          { "rate_pct": 30, "from": 1500001, "to": null }
+        ],
+        "rebate_87A": "Rs.12,500 for income ≤ Rs.5 lakh",
+        "standard_deduction": 0,
+        "allows_80C_HRA_etc": false
+      },
+      "cess_pct": 4
+    },
+
+    "FY2021-22": {
+      "assessment_year": "AY 2022-23",
+      "regime": "dual_regime",
+      "old_regime": {
+        "slabs_below60": [
+          { "rate_pct": 0, "from": 0, "to": 250000 },
+          { "rate_pct": 5, "from": 250001, "to": 500000 },
+          { "rate_pct": 20, "from": 500001, "to": 1000000 },
+          { "rate_pct": 30, "from": 1000001, "to": null }
+        ],
+        "rebate_87A": "Rs.12,500 for income ≤ Rs.5 lakh",
+        "standard_deduction": 50000,
+        "allows_80C_HRA_etc": true
+      },
+      "new_regime": {
+        "slabs_below60": [
+          { "rate_pct": 0, "from": 0, "to": 250000 },
+          { "rate_pct": 5, "from": 250001, "to": 500000 },
+          { "rate_pct": 10, "from": 500001, "to": 750000 },
+          { "rate_pct": 15, "from": 750001, "to": 1000000 },
+          { "rate_pct": 20, "from": 1000001, "to": 1250000 },
+          { "rate_pct": 25, "from": 1250001, "to": 1500000 },
+          { "rate_pct": 30, "from": 1500001, "to": null }
+        ],
+        "rebate_87A": "Rs.12,500 for income ≤ Rs.5 lakh",
+        "standard_deduction": 0,
+        "allows_80C_HRA_etc": false
+      },
+      "cess_pct": 4
+    },
+
+    "FY2022-23": {
+      "assessment_year": "AY 2023-24",
+      "regime": "dual_regime",
+      "old_regime": {
+        "slabs_below60": [
+          { "rate_pct": 0, "from": 0, "to": 250000 },
+          { "rate_pct": 5, "from": 250001, "to": 500000 },
+          { "rate_pct": 20, "from": 500001, "to": 1000000 },
+          { "rate_pct": 30, "from": 1000001, "to": null }
+        ],
+        "rebate_87A": "Rs.12,500 for income ≤ Rs.5 lakh",
+        "standard_deduction": 50000,
+        "allows_80C_HRA_etc": true
+      },
+      "new_regime": {
+        "slabs_below60": [
+          { "rate_pct": 0, "from": 0, "to": 250000 },
+          { "rate_pct": 5, "from": 250001, "to": 500000 },
+          { "rate_pct": 10, "from": 500001, "to": 750000 },
+          { "rate_pct": 15, "from": 750001, "to": 1000000 },
+          { "rate_pct": 20, "from": 1000001, "to": 1250000 },
+          { "rate_pct": 25, "from": 1250001, "to": 1500000 },
+          { "rate_pct": 30, "from": 1500001, "to": null }
+        ],
+        "rebate_87A": "Rs.12,500 for income ≤ Rs.5 lakh",
+        "standard_deduction": 0,
+        "allows_80C_HRA_etc": false
+      },
+      "cess_pct": 4
+    },
+
+    "FY2023-24": {
+      "assessment_year": "AY 2024-25",
+      "regime": "dual_regime_new_is_default",
+      "default_regime": "new",
+      "old_regime": {
+        "slabs_below60": [
+          { "rate_pct": 0, "from": 0, "to": 250000 },
+          { "rate_pct": 5, "from": 250001, "to": 500000 },
+          { "rate_pct": 20, "from": 500001, "to": 1000000 },
+          { "rate_pct": 30, "from": 1000001, "to": null }
+        ],
+        "rebate_87A": "Rs.12,500 for income ≤ Rs.5 lakh",
+        "standard_deduction": 50000,
+        "allows_80C_HRA_etc": true
+      },
+      "new_regime": {
+        "note": "Revised slabs — Budget 2023. New regime is now default.",
+        "slabs_below60": [
+          { "rate_pct": 0, "from": 0, "to": 300000 },
+          { "rate_pct": 5, "from": 300001, "to": 600000 },
+          { "rate_pct": 10, "from": 600001, "to": 900000 },
+          { "rate_pct": 15, "from": 900001, "to": 1200000 },
+          { "rate_pct": 20, "from": 1200001, "to": 1500000 },
+          { "rate_pct": 30, "from": 1500001, "to": null }
+        ],
+        "rebate_87A": "Rs.25,000 for income ≤ Rs.7 lakh (effective zero tax)",
+        "standard_deduction": 50000,
+        "allows_80C_HRA_etc": false,
+        "allows_employer_NPS_80CCD2": true
+      },
+      "cess_pct": 4
+    },
+
+    "FY2024-25": {
+      "assessment_year": "AY 2025-26",
+      "regime": "dual_regime_new_is_default",
+      "default_regime": "new",
+      "old_regime": {
+        "slabs_below60": [
+          { "rate_pct": 0, "from": 0, "to": 250000 },
+          { "rate_pct": 5, "from": 250001, "to": 500000 },
+          { "rate_pct": 20, "from": 500001, "to": 1000000 },
+          { "rate_pct": 30, "from": 1000001, "to": null }
+        ],
+        "rebate_87A": "Rs.12,500 for income ≤ Rs.5 lakh",
+        "standard_deduction": 50000,
+        "allows_80C_HRA_etc": true
+      },
+      "new_regime": {
+        "note": "Budget 2024 revised — standard deduction raised to Rs.75,000",
+        "slabs_below60": [
+          { "rate_pct": 0, "from": 0, "to": 300000 },
+          { "rate_pct": 5, "from": 300001, "to": 700000 },
+          { "rate_pct": 10, "from": 700001, "to": 1000000 },
+          { "rate_pct": 15, "from": 1000001, "to": 1200000 },
+          { "rate_pct": 20, "from": 1200001, "to": 1500000 },
+          { "rate_pct": 30, "from": 1500001, "to": null }
+        ],
+        "rebate_87A": "Rs.25,000 for income ≤ Rs.7 lakh",
+        "standard_deduction": 75000,
+        "effective_zero_tax_limit": 775000,
+        "allows_80C_HRA_etc": false
+      },
+      "capital_gains_changes_budget2024": {
+        "STCG_listed_equity_pct": 20,
+        "LTCG_listed_equity_pct": 12.5,
+        "LTCG_threshold_exempt": 125000,
+        "note": "STCG raised from 15% to 20%; LTCG raised from 10% to 12.5%; exemption raised from Rs.1L to Rs.1.25L"
+      },
+      "cess_pct": 4
+    },
+
+    "FY2025-26": {
+      "assessment_year": "AY 2026-27",
+      "regime": "dual_regime_new_is_default",
+      "default_regime": "new",
+      "old_regime": {
+        "slabs_below60": [
+          { "rate_pct": 0, "from": 0, "to": 250000 },
+          { "rate_pct": 5, "from": 250001, "to": 500000 },
+          { "rate_pct": 20, "from": 500001, "to": 1000000 },
+          { "rate_pct": 30, "from": 1000001, "to": null }
+        ],
+        "slabs_60to80": [
+          { "rate_pct": 0, "from": 0, "to": 300000 },
+          { "rate_pct": 5, "from": 300001, "to": 500000 },
+          { "rate_pct": 20, "from": 500001, "to": 1000000 },
+          { "rate_pct": 30, "from": 1000001, "to": null }
+        ],
+        "slabs_above80": [
+          { "rate_pct": 0, "from": 0, "to": 500000 },
+          { "rate_pct": 20, "from": 500001, "to": 1000000 },
+          { "rate_pct": 30, "from": 1000001, "to": null }
+        ],
+        "rebate_87A": "Rs.12,500 for income ≤ Rs.5 lakh",
+        "standard_deduction": 50000,
+        "allows_80C_HRA_etc": true,
+        "section_80C_limit": 150000,
+        "section_80D_limit": {
+          "self_family": 25000,
+          "senior_citizen_parents": 50000
+        }
+      },
+      "new_regime": {
+        "note": "Budget 2025 major reform — basic exemption raised to Rs.4L, rebate raised to Rs.12L",
+        "slabs_below60": [
+          { "rate_pct": 0, "from": 0, "to": 400000 },
+          { "rate_pct": 5, "from": 400001, "to": 800000 },
+          { "rate_pct": 10, "from": 800001, "to": 1200000 },
+          { "rate_pct": 15, "from": 1200001, "to": 1600000 },
+          { "rate_pct": 20, "from": 1600001, "to": 2000000 },
+          { "rate_pct": 25, "from": 2000001, "to": 2400000 },
+          { "rate_pct": 30, "from": 2400001, "to": null }
+        ],
+        "rebate_87A": "Rs.60,000 for income ≤ Rs.12 lakh — effective zero tax",
+        "standard_deduction_salaried": 75000,
+        "effective_zero_tax_salaried": 1275000,
+        "allows_80C_HRA_etc": false,
+        "allows_employer_NPS_80CCD2": true,
+        "allows_standard_deduction": true
+      },
+      "surcharge": [
+        { "on_income_above": 5000000, "surcharge_pct": 10 },
+        { "on_income_above": 10000000, "surcharge_pct": 15 },
+        {
+          "on_income_above": 20000000,
+          "surcharge_pct": 25,
+          "note": "Capped at 25% (old: 37%) from FY2023-24"
+        }
+      ],
+      "capital_gains": {
+        "STCG_listed_equity_pct": 20,
+        "LTCG_listed_equity_pct": 12.5,
+        "LTCG_threshold_exempt": 125000,
+        "STCG_debt_MF": "added to income, taxed at slab rate",
+        "LTCG_real_estate": 20,
+        "LTCG_real_estate_indexation": false,
+        "note": "Indexation benefit on real estate removed from Budget 2024 onwards"
+      },
+      "cess_pct": 4,
+      "cess_label": "Health & Education Cess 4%",
+      "new_income_tax_act_2025": "The Income Tax Act 2025 replaces the 1961 Act but comes into effect April 1, 2026 (FY 2026-27). No change in rates for FY 2025-26."
+    },
+
+    "FY2026-27": {
+      "assessment_year": "AY 2027-28",
+      "note": "Governed by the new Income Tax Act 2025 (effective Apr 1, 2026). Budget 2026 retained FY2025-26 slab rates without change. Slabs identical to FY2025-26 new regime.",
+      "regime": "dual_regime_new_is_default",
+      "default_regime": "new",
+      "new_regime_slabs": [
+        { "rate_pct": 0, "from": 0, "to": 400000 },
+        { "rate_pct": 5, "from": 400001, "to": 800000 },
+        { "rate_pct": 10, "from": 800001, "to": 1200000 },
+        { "rate_pct": 15, "from": 1200001, "to": 1600000 },
+        { "rate_pct": 20, "from": 1600001, "to": 2000000 },
+        { "rate_pct": 25, "from": 2000001, "to": 2400000 },
+        { "rate_pct": 30, "from": 2400001, "to": null }
+      ],
+      "rebate_87A": "Rs.60,000 for income ≤ Rs.12 lakh",
+      "standard_deduction_salaried": 75000,
+      "cess_pct": 4,
+      "governing_act": "Income Tax Act 2025 (replaces Income Tax Act 1961)"
+    }
+  },
+
+  "sebi_key_regulations_timeline": [
+    {
+      "date": "2015-11-01",
+      "event": "SEBI introduces LODR (Listing Obligations & Disclosure Requirements)"
+    },
+    {
+      "date": "2017-07-01",
+      "event": "GST unified indirect tax regime launched"
+    },
+    {
+      "date": "2018-02-01",
+      "event": "LTCG on equity reintroduced at 10% above Rs.1 lakh"
+    },
+    {
+      "date": "2019-09-20",
+      "event": "Corporate tax cut — base rate 30% to 22%; new cos 15%"
+    },
+    {
+      "date": "2020-01-01",
+      "event": "DDT (Dividend Distribution Tax) removed; dividends taxed in hands of recipient"
+    },
+    {
+      "date": "2021-02-01",
+      "event": "SEBI introduces T+1 settlement framework (phased rollout)"
+    },
+    {
+      "date": "2022-04-01",
+      "event": "Crypto/VDA taxed at 30% flat (Budget 2022)"
+    },
+    {
+      "date": "2022-07-01",
+      "event": "SEBI bans upfront commission in mutual funds; direct plans preferred"
+    },
+    {
+      "date": "2023-04-01",
+      "event": "Debt mutual fund LTCG benefit removed — taxed at slab rate"
+    },
+    {
+      "date": "2023-10-01",
+      "event": "NSE switches to T+1 rolling settlement for all equity stocks"
+    },
+    {
+      "date": "2024-07-23",
+      "event": "STCG equity tax hiked 15%→20%; LTCG 10%→12.5%; exemption Rs.1L→Rs.1.25L"
+    },
+    {
+      "date": "2025-01-20",
+      "event": "SEBI introduces index options position limits for retail traders"
+    },
+    {
+      "date": "2026-04-01",
+      "event": "New Income Tax Act 2025 comes into effect"
+    }
+  ],
+
+  "notes": {
+    "index_data_source": "NSE India, BSE India",
+    "tax_data_source": "CBDT, Income Tax Department of India, Finance Acts 2015-2025",
+    "monetary_policy_source": "RBI Monetary Policy Statements 2015-2026",
+    "fiscal_year_definition": "April 1 to March 31",
+    "calendar_year_returns": "Nifty 50 returns are calendar year (Jan-Dec), not FY",
+    "regime_9_sp500_analogy": "Regime 9 (2025-04-02 to 2025-12-31) analogous to US Tariff Shock regime in the original dataset",
+    "disclaimer": "This dataset is for educational/research purposes. Verify tax slabs with a SEBI-registered advisor or CA before use."
+  }
+}

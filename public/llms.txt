@@ -1,0 +1,153 @@
+# LLMs.txt for FinanceChk - Free Financial Calculators for India (https://financechk.com/)
+
+# This file describes the structure and content of FinanceChk, a website providing free financial calculators, tools, and educational content for Indian users. The site aims to simplify personal finance decisions related to loans, investments, taxes, and trading.
+
+# 1. Main Website: [FinanceChk — Free Financial Calculators for India](https://financechk.com/)
+#    - Description: Homepage providing an overview of FinanceChk's offerings.
+
+# 2. Tools Section: [Financial Calculators India — Free Online Tools | FinanceChk](https://financechk.com/tools)
+#    - Description: Central hub for all financial calculators.
+
+#    2.1 Loan Calculators: [Loan EMI Calculators India - Home Loan, Car Loan, Personal Loan | FinanceChk](https://financechk.com/tools/loan-calculators)
+#        - Description: Collection of loan-related calculators.
+#        - Pages:
+#            - [Car Loan EMI Calculator — Full Amortization Schedule | FinanceChk](https://financechk.com/tools/car-loan-emi-calculator)
+#            - [Home Loan EMI Calculator India - Prepayment & Tax Savings | FinanceChk](https://financechk.com/tools/advanced-home-loan-emi-calculator)
+#            - [Personal Loan Prepayment Calculator - Interest & Tenure Saved | FinanceChk](https://financechk.com/tools/personal-loan-prepayment-calculator)
+#            - [Personal Loan Balance Transfer Calculator - Net Savings Check | FinanceChk](https://financechk.com/tools/personal-loan-balance-transfer-calculator)
+#            - [Education Loan EMI Calculator with Section 80E Tax Benefit | FinanceChk](https://financechk.com/tools/education-loan-calculator)
+
+#    2.2 Investment Calculators: [Investment Calculators India - SIP, FD, RD, PPF, Lumpsum | FinanceChk](https://financechk.com/tools/investment-calculators)
+#        - Description: Collection of investment-related calculators.
+#        - Pages:
+#            - [SIP Calculator - Systematic Investment Plan Returns Calculator India | FinanceChk](https://financechk.com/tools/sip-calculator)
+#            - [Fixed Deposit (FD) Calculator India - Quarterly Compounding | FinanceChk](https://financechk.com/tools/fd-calculator)
+#            - [Recurring Deposit (RD) Calculator India - Monthly Compounding | FinanceChk](https://financechk.com/tools/rd-calculator)
+#            - [Lump Sum Mutual Fund Calculator — Compounding Power | FinanceChk](https://financechk.com/tools/lumpsum-calculator)
+#            - [Compound Interest Calculator India - Calculate FD, Savings & Investment Returns | FinanceChk](https://financechk.com/tools/compound-interest-calculator)
+#            - [PPF Calculator India - Public Provident Fund Returns & Interest Calculator | FinanceChk](https://financechk.com/tools/ppf-calculator)
+#            - [EPF Calculator India - Employee Provident Fund Returns & Withdrawal Guide | FinanceChk](https://financechk.com/tools/epf-calculator)
+#            - [EPF VPF Calculator India | PF Corpus at Retirement | FinanceChk](https://financechk.com/tools/epf-vpf-calculator)
+#            - [ELSS Calculator India - Section 80C Tax Saving + Returns | FinanceChk](https://financechk.com/tools/elss-calculator)
+# 	    - [Sukanya Samriddhi Yojana Calculator 2025 | SSY Returns & Maturity Amount | FinanceChk](https://financechk.com/tools/sukanya-samriddhi-calculator)
+
+#    2.3 Tax Calculators: [Tax Calculators India - Income Tax, GST, Capital Gains Calculators | FinanceChk](https://financechk.com/tools/tax-calculators)
+#        - Description: Collection of tax-related calculators.
+#        - Pages:
+#            - [Income Tax Calculator ₹30 Lakh - Old vs New Regime FY 2025-26 | FinanceChk](https://financechk.com/tools/income-tax-calculator-30-lakh)
+#            - [Income Tax Calculator ₹40 Lakh - Old vs New Regime FY 2025-26 | FinanceChk](https://financechk.com/tools/income-tax-calculator-40-lakh)
+#            - [Income Tax Calculator ₹50 Lakh - Old vs New Regime FY 2025-26 | FinanceChk](https://financechk.com/tools/income-tax-calculator-50-lakh)
+#            - [Income Tax Calculator ₹1 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-1-lakh)
+#            - [Income Tax Calculator ₹2 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-2-lakh)
+#            - [Income Tax Calculator ₹3 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-3-lakh)
+#            - [Income Tax Calculator ₹4 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-4-lakh)
+#            - [Income Tax Calculator ₹5 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-5-lakh)
+#            - [Income Tax Calculator ₹6 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-6-lakh)
+#            - [Income Tax Calculator ₹7 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-7-lakh)
+#            - [Income Tax Calculator ₹8 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-8-lakh)
+#            - [Income Tax Calculator ₹9 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-9-lakh)
+#            - [Income Tax Calculator ₹10 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-10-lakh)
+#            - [Income Tax Calculator ₹15 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-15-lakh)
+#            - [Income Tax Calculator ₹20 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-20-lakh)
+#            - [Income Tax Calculator ₹25 Lakh - Old vs New Regime FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-25-lakh)
+#            - [Old vs New Tax Regime Comparison Calculator India FY 2026-27 | FinanceChk](https://financechk.com/tools/tax-regime-comparison)
+#            - [Advance Tax Calculator India | Quarterly Due Amount | FinanceChk](https://financechk.com/tools/advance-tax-calculator)
+#            - [Freelancer Tax Calculator India - Section 44ADA Presumptive Income | FinanceChk](https://financechk.com/tools/freelancer-tax-calculator)
+#            - [Section 87A Marginal Relief Calculator FY 2026-27 - Tax Rebate Up to Rs 25,000 | FinanceChk](https://financechk.com/tools/section-87a-marginal-relief-calculator)
+#            - [New vs Old Tax Regime Break-Even Deduction Calculator FY 2026-27 | FinanceChk](https://financechk.com/tools/new-vs-old-regime-break-even)
+# 	    - [HRA Calculator India - House Rent Allowance Exemption Calculator 2025-26 | FinanceChk](https://financechk.com/tools/hra-calculator)
+#            - [US Federal Income Tax Calculator 2025 - Calculate Your Tax Liability | FinanceChk](https://financechk.com/tools/us-federal-income-tax-calculator)
+
+#    2.4 Trading Calculators: [Trading Calculators India - STT, Brokerage, F&O, Options | FinanceChk](https://financechk.com/tools/trading-calculators)
+#        - Description: Collection of trading-related calculators.
+#        - Pages:
+#            - [STT & Brokerage Calculator (April 2026 Updates) | FinanceChk](https://financechk.com/tools/stt-brokerage-calculator)
+#            - [STT Calculator 2026 - Securities Transaction Tax on Equity, F&O & Intraday | FinanceChk](https://financechk.com/tools/stt-calculator)
+#            - [F&O Brokerage Calculator India | Futures & Options Charges - STT, GST, SEBI, Exchange | FinanceChk](https://financechk.com/tools/fo-brokerage-calculator)
+#            - [MCX Margin Calculator | CRUDEOILM, Gold, Silver P&L | FinanceChk](https://financechk.com/tools/mcx-commodity-margin-calculator)
+#            - [MCX Crude Oil Position Sizer & Risk Calculator | FinanceChk](https://financechk.com/tools/mcx-crude-position-sizer)
+
+#    2.5 Home Loan Eligibility Calculators:
+# 	   - [Home Loan Eligibility Calculator India - Based on Salary | FinanceChk](https://financechk.com/tools/home-loan-eligibility-calculator)
+#        - [Home Loan Eligibility Calculator Delhi - Loan Eligibility Delhi | FinanceChk](https://financechk.com/tools/home-loan-eligibility-delhi)
+#        - [Home Loan Eligibility Calculator Jaipur - Loan Eligibility Jaipur | FinanceChk](https://financechk.com/tools/home-loan-eligibility-jaipur)
+#        - [Home Loan Eligibility Calculator Lucknow - Loan Eligibility Lucknow | FinanceChk](https://financechk.com/tools/home-loan-eligibility-lucknow)
+#        - [Home Loan Eligibility Calculator Kolkata - Loan Eligibility Kolkata | FinanceChk](https://financechk.com/tools/home-loan-eligibility-kolkata)
+#        - [Home Loan Eligibility Calculator Kochi - Loan Eligibility Kochi | FinanceChk](https://financechk.com/tools/home-loan-eligibility-kochi)
+#        - [Home Loan Eligibility Calculator Bangalore - Loan Eligibility Bangalore | FinanceChk](https://financechk.com/tools/home-loan-eligibility-bangalore)
+#        - [Home Loan Eligibility Calculator Hyderabad - Loan Eligibility Hyderabad | FinanceChk](https://financechk.com/tools/home-loan-eligibility-hyderabad)
+#        - [Home Loan Eligibility Calculator Mumbai - Loan Eligibility Mumbai | FinanceChk](https://financechk.com/tools/home-loan-eligibility-mumbai)
+#        - [Home Loan Eligibility Calculator Chennai - Loan Eligibility Chennai | FinanceChk](https://financechk.com/tools/home-loan-eligibility-chennai)
+#        - [Home Loan Eligibility Calculator Pune - Loan Eligibility Pune | FinanceChk](https://financechk.com/tools/home-loan-eligibility-pune)
+
+#    2.6 Specialized Income Tax Calculators:
+#        - [Income Tax Calculator for IT Employees - Tax Saving Tips FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-it-employee)
+#        - [Income Tax Calculator for Doctors - Tax Saving Tips FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-doctor)
+#        - [Income Tax Calculator for Government Employees - Tax Saving Tips FY 2026-27 | FinanceChk](https://financechk.com/tools/income-tax-calculator-government-employee)
+
+#    2.7 FD Calculators (Specific Banks):
+#        - [HDFC Bank FD Calculator - Current HDFC FD Rates 2025 | FinanceChk](https://financechk.com/tools/fd-calculator-hdfc)
+#        - [SBI FD Calculator - Current SBI FD Rates 2025 | FinanceChk](https://financechk.com/tools/fd-calculator-sbi)
+
+#    2.8 SIP Calculators (Specific Monthly Amounts):
+#        - [SIP Calculator ₹1,000 Monthly - 10 Year Returns | FinanceChk](https://financechk.com/tools/sip-calculator-1000-monthly)
+#        - [SIP Calculator ₹2,000 Monthly - 10 Year Returns | FinanceChk](https://financechk.com/tools/sip-calculator-2000-monthly)
+#        - [SIP Calculator ₹10,000 Monthly - 10 Year Returns | FinanceChk](https://financechk.com/tools/sip-calculator-10000-monthly)
+
+#    2.9 Advanced Calculators:
+#        - [Prepay Home Loan vs. Invest Calculator — The Ultimate Decision Tool | FinanceChk](https://financechk.com/tools/prepay-vs-invest)
+#        - [SWP Calculator India | Corpus Longevity Planner | FinanceChk](https://financechk.com/tools/swp-calculator)
+#        - [Discount vs. Full-Service Brokerage Comparison | FinanceChk](https://financechk.com/tools/brokerage-comparison-tool)
+#        - [Step-Up SIP Calculator — Wealth Accelerator | FinanceChk](https://financechk.com/tools/step-up-sip-calculator)
+# 	    - [Gratuity Calculator India 2025 | Formula & Tax Exemption | FinanceChk](https://financechk.com/tools/gratuity-calculator)
+# 	    - [Home Loan Tax Benefit Calculator - Section 24(b) and 80C | FinanceChk](https://financechk.com/tools/home-loan-tax-benefit-calculator)
+# 	    - [Depreciation Calculator - SLM and WDV Method | FinanceChk](https://financechk.com/tools/depreciation-calculator)
+# 	    - [Salary Hike Tax Impact Calculator India | Net Take-Home Change + 90-Day Plan | FinanceChk](https://financechk.com/tools/salary-hike-tax-impact-calculator)
+# 	    - [Home Loan Balance Transfer Calculator India | Savings vs Processing Fee | FinanceChk](https://financechk.com/tools/home-loan-balance-transfer-calculator)
+# 	    - [Emergency Fund Calculator India 2025 | How Much & Where to Invest | FinanceChk](https://financechk.com/tools/emergency-fund-calculator)
+
+#    2.10 STT Sub-Calculators:
+#        - [Equity Delivery STT Calculator 2026 | 0.1% Buy + Sell | FinanceChk](https://financechk.com/tools/stt-calculator/equity-delivery)
+#        - [Intraday STT Calculator 2026 | 0.025% Sell Side | FinanceChk](https://financechk.com/tools/stt-calculator/intraday-equity)
+#        - [Futures STT Calculator 2026 | 0.05% Sell Side | FinanceChk](https://financechk.com/tools/stt-calculator/futures)
+#        - [Options STT Calculator 2026 | 0.15% on Premium | FinanceChk](https://financechk.com/tools/stt-calculator/options-sell)
+#        - [Options Exercise STT Calculator 2026 | 0.15% Intrinsic | FinanceChk](https://financechk.com/tools/stt-calculator/options-exercise)
+
+# 	2.11 Tax Notice Reply Generators:
+# 	    - [Rent Receipt Generator India | Free PDF Download for HRA Claim | FinanceChk](https://financechk.com/tools/rent-receipt-generator)
+# 	    - [Income Tax Notice Reply Generator India | 143(1), 139(9), 156 & AIS | FinanceChk](https://financechk.com/tools/income-tax-notice-reply-generator)
+# 	    - [143(1) Notice Reply Generator India | Intimation Mismatch Draft | FinanceChk](https://financechk.com/tools/income-tax-notice-reply-generator/143-1-mismatch)
+# 	    - [Defective Return 139(9) Reply Generator India | Response Draft | FinanceChk](https://financechk.com/tools/income-tax-notice-reply-generator/defective-return-139-9)
+# 	    - [Demand Notice 156 Reply Generator India | Tax Demand Response | FinanceChk](https://financechk.com/tools/income-tax-notice-reply-generator/demand-notice-156)
+# 	    - [AIS Mismatch Reply Generator India | Income Tax Response Draft | FinanceChk](https://financechk.com/tools/income-tax-notice-reply-generator/ais-mismatch)
+
+# 	2.12 Home Loan Letter Generators:
+# 	    - [Home Loan Letter Generator India | Prepayment, ROI Reduction, NOC Requests | FinanceChk](https://financechk.com/tools/home-loan-letter-generator)
+# 	    - [Home Loan Prepayment Request Letter Generator India | FinanceChk](https://financechk.com/tools/home-loan-letter-generator/prepayment-request)
+# 	    - [Home Loan ROI Reduction Letter Generator India | FinanceChk](https://financechk.com/tools/home-loan-letter-generator/roi-reduction-request)
+# 	    - [Home Loan Foreclosure NOC Letter Generator India | FinanceChk](https://financechk.com/tools/home-loan-letter-generator/foreclosure-noc-request)
+# 	    - [Home Loan Interest Certificate Request Letter Generator India | FinanceChk](https://financechk.com/tools/home-loan-letter-generator/interest-certificate-request)
+
+# 	2.13 Other Generators:
+# 	    - [Tax Proof Pack Generator India | Payroll Submission Checklist + Email Draft | FinanceChk](https://financechk.com/tools/tax-proof-pack-generator)
+# 	    - [Form 16 Tax Crosscheck Tool India | TDS vs Estimated Tax Reconciliation | FinanceChk](https://financechk.com/tools/form-16-tax-crosscheck)
+
+# 3. Blog Section: [Financial Intelligence Blog — Indian Taxation & Strategy | FinanceChk](https://financechk.com/blog)
+#    - Description: Blog providing articles and guides on personal finance topics.
+#    - Pages:
+#        - [Income Tax Act 2025 Changes: The Definitive Guide | FinanceChk](https://financechk.com/blog/income-tax-act-2025-changes)
+#        - [F&O Tax Guide: Filing ITR-3 for Traders in India | FinanceChk](https://financechk.com/blog/f-and-o-tax-guide-itr-3)
+#        - [MCX Crude Oil Intraday Strategy: The US Session Edge | FinanceChk](https://financechk.com/blog/mcx-crude-oil-intraday-trading-strategy)
+#        - [Stock Market Capital Gains Tax Guide 2025: Equity vs. Debt vs. Gold | FinanceChk](https://financechk.com/blog/stock-market-capital-gains-tax-guide-2025)
+#        - [Old vs New Tax Regime 2025: Breaking Down the Math | FinanceChk](https://financechk.com/blog/old-vs-new-tax-regime-comparison-2025)
+#        - [Home Loan Eligibility 2025: SBI, HDFC & ICICI Comparison | FinanceChk](https://financechk.com/blog/home-loan-eligibility-all-banks-2025)
+#        - [Freelancer Tax Guide 2025: Section 44ADA Explained | FinanceChk](https://financechk.com/blog/freelancer-tax-44ada-complete-guide)
+#        - [Mutual Fund Tax Rules 2025: Equity, Debt & LTCG Rates | FinanceChk](https://financechk.com/blog/mutual-fund-ltcg-tax-rules-2025)
+#        - [SIP vs Lump Sum vs Step-Up SIP: Which is Better? | FinanceChk](https://financechk.com/blog/sip-vs-lumpsum-vs-step-up-comparison)
+#        - [Home Loan Tax Benefits: Section 80C & 24b Guide | FinanceChk](https://financechk.com/blog/section-80c-24b-home-loan-tax-benefits)
+#        - [Zerodha vs Groww vs Angel One: 2025 Comparison | FinanceChk](https://financechk.com/blog/zerodha-vs-groww-vs-angel-one-brokerage-2025)
+
+# 4. About Us: [About FinanceChk — Why We Build Free Financial Tools](https://financechk.com/about)
+#    - Description: Information about the FinanceChk website and its purpose.
+
+# Purpose of the site: To provide free, accurate, and easy-to-use financial tools and educational content to help users make informed financial decisions in India. The site covers a wide range of personal finance topics, including loans, investments, taxes, and trading. The calculators are designed to be user-friendly and provide detailed results, while the blog offers in-depth analysis and guidance on various financial topics.

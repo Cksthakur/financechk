@@ -1,0 +1,835 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.w{padding:1.5rem 0;font-family:var(--font-sans)}
+.nav{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:1.5rem}
+.tab{padding:5px 12px;border-radius:20px;border:0.5px solid var(--color-border-secondary);font-size:11px;cursor:pointer;background:transparent;color:var(--color-text-secondary);transition:all .15s;font-weight:500}
+.tab.on{background:var(--color-text-primary);color:var(--color-background-primary);border-color:transparent}
+.pg{display:none}.pg.on{display:block}
+.note{background:var(--color-background-secondary);border-left:2px solid var(--color-border-info);border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;padding:.7rem 1rem;margin-bottom:1.25rem;font-size:12px;color:var(--color-text-secondary);line-height:1.6}
+.note.g{border-left-color:var(--color-border-success)}
+.note.a{border-left-color:var(--color-border-warning)}
+.ph{display:flex;align-items:baseline;gap:10px;margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:0.5px solid var(--color-border-tertiary)}
+.ph-sub{font-size:10px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--color-text-secondary)}
+.ph-title{font-size:17px;font-weight:500;color:var(--color-text-primary)}
+.ph-r{margin-left:auto;font-size:11px;color:var(--color-text-tertiary)}
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:.875rem 1rem;margin-bottom:8px}
+.card.hi{border-color:var(--color-border-success)}
+.card.wa{border-color:var(--color-border-warning)}
+.ct{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:3px}
+.cd{font-size:12px;color:var(--color-text-secondary);line-height:1.6}
+.tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
+.tag{font-size:10px;padding:2px 7px;border-radius:4px;font-weight:500}
+.ti{background:var(--color-background-info);color:var(--color-text-info)}
+.ts{background:var(--color-background-success);color:var(--color-text-success)}
+.tw{background:var(--color-background-warning);color:var(--color-text-warning)}
+.tk{background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-secondary)}
+.sl{font-size:10px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--color-text-secondary);margin-bottom:.6rem;margin-top:1.2rem}
+.g2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin-bottom:.75rem}
+.g3{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:8px;margin-bottom:.75rem}
+.met{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.75rem}
+.ml{font-size:10px;color:var(--color-text-secondary);margin-bottom:3px;text-transform:uppercase;letter-spacing:.05em;font-weight:500}
+.mv{font-size:16px;font-weight:500;color:var(--color-text-primary);line-height:1.3}
+.ms{font-size:10px;color:var(--color-text-tertiary);margin-top:2px}
+ul.cl{list-style:none}
+ul.cl li{font-size:12px;color:var(--color-text-secondary);padding:4px 0;display:flex;gap:8px;border-bottom:0.5px solid var(--color-border-tertiary);line-height:1.5}
+ul.cl li:last-child{border-bottom:none}
+.d{width:5px;height:5px;border-radius:50%;background:var(--color-text-tertiary);margin-top:5px;flex-shrink:0}
+.d.g{background:var(--color-text-success)}
+.d.a{background:var(--color-text-warning)}
+.d.r{background:var(--color-text-danger)}
+.row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.row:last-child{border-bottom:none}
+.rn{font-size:10px;font-weight:500;color:var(--color-text-tertiary);width:18px;flex-shrink:0;padding-top:2px}
+.rb{flex:1}
+.rt{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px}
+.rd{font-size:12px;color:var(--color-text-secondary);line-height:1.5}
+.code{font-family:var(--font-mono);font-size:11px;background:var(--color-background-secondary);padding:1px 5px;border-radius:3px;color:var(--color-text-primary)}
+.ft{font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary);line-height:2;background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.875rem 1rem;margin-bottom:10px;white-space:pre}
+.ft .cm{color:var(--color-text-tertiary);font-size:10px}
+.ft .k{color:var(--color-text-info)}
+.ft .v{color:var(--color-text-success)}
+
+.swatch-grid{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.875rem}
+.sw-wrap{display:flex;flex-direction:column;align-items:center;gap:3px}
+.sw{width:40px;height:40px;border-radius:8px;border:0.5px solid var(--color-border-tertiary)}
+.sw-lbl{font-size:9px;color:var(--color-text-tertiary);text-align:center;font-family:var(--font-mono);line-height:1.4}
+
+.type-demo{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden;margin-bottom:8px}
+.type-row{display:flex;align-items:center;padding:.75rem 1rem;border-bottom:0.5px solid var(--color-border-tertiary);gap:16px}
+.type-row:last-child{border-bottom:none}
+.type-sample{flex:1;color:var(--color-text-primary)}
+.type-meta{text-align:right;flex-shrink:0}
+.type-name{font-size:10px;font-weight:500;color:var(--color-text-secondary);font-family:var(--font-mono)}
+.type-spec{font-size:10px;color:var(--color-text-tertiary);font-family:var(--font-mono);margin-top:1px}
+
+.space-row{display:flex;align-items:center;gap:12px;padding:5px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.space-row:last-child{border-bottom:none}
+.space-bar{height:100%;background:var(--color-text-primary);opacity:.15;border-radius:2px;flex-shrink:0}
+.space-label{font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary);width:60px;flex-shrink:0}
+.space-value{font-size:11px;color:var(--color-text-tertiary)}
+
+.comp-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px;margin-bottom:.75rem}
+.comp-c{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.75rem}
+.comp-n{font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:3px}
+.comp-d{font-size:11px;color:var(--color-text-secondary);line-height:1.4}
+.comp-tag{font-size:10px;color:var(--color-text-tertiary);margin-top:4px}
+
+.content-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:.875rem 1rem;margin-bottom:8px}
+.content-type{display:inline-block;font-size:10px;font-weight:500;padding:2px 8px;border-radius:3px;margin-bottom:6px}
+.ct-tool{background:#dbeafe;color:#1e40af}
+.ct-art{background:#dcfce7;color:#166534}
+.ct-clust{background:#fef3c7;color:#92400e}
+.content-title{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:3px}
+.content-kw{font-size:11px;font-family:var(--font-mono);color:var(--color-text-secondary);margin-bottom:5px}
+.content-why{font-size:11px;color:var(--color-text-secondary);line-height:1.5}
+.content-meta{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+
+.shadow-demo{display:flex;gap:12px;flex-wrap:wrap;padding:.5rem 0}
+.shadow-box{width:80px;height:50px;border-radius:10px;background:var(--color-background-primary);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--color-text-secondary);text-align:center;font-family:var(--font-mono)}
+
+.page-mockup{background:var(--color-background-secondary);border-radius:var(--border-radius-lg);padding:1rem;margin-bottom:8px}
+.pm-header{background:var(--color-background-primary);border-radius:8px;padding:.6rem .875rem;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between}
+.pm-logo{font-size:12px;font-weight:500;color:var(--color-text-primary)}
+.pm-nav{display:flex;gap:12px}
+.pm-nav span{font-size:10px;color:var(--color-text-secondary)}
+.pm-body{display:grid;grid-template-columns:1fr 280px;gap:8px}
+.pm-tool{background:var(--color-background-primary);border-radius:8px;padding:.75rem}
+.pm-aside{display:flex;flex-direction:column;gap:8px}
+.pm-ad{background:var(--color-background-secondary);border:0.5px dashed var(--color-border-secondary);border-radius:6px;height:60px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--color-text-tertiary)}
+.pm-related{background:var(--color-background-primary);border-radius:8px;padding:.6rem}
+.pm-section-title{font-size:10px;font-weight:500;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem}
+.pm-input{background:var(--color-background-secondary);border-radius:5px;height:24px;margin-bottom:6px}
+.pm-result{background:#dbeafe;border-radius:6px;padding:.5rem;margin-top:.5rem}
+.pm-result-num{font-size:14px;font-weight:500;color:#1e40af;font-family:var(--font-mono)}
+.pm-result-lbl{font-size:9px;color:#3b82f6;margin-top:1px}
+.pm-link{font-size:10px;color:var(--color-text-secondary);padding:3px 0;border-bottom:0.5px solid var(--color-border-tertiary);display:block}
+.pm-link:last-child{border-bottom:none}
+.motion-row{display:flex;align-items:center;gap:12px;padding:6px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.motion-row:last-child{border-bottom:none}
+.motion-label{font-size:12px;color:var(--color-text-secondary);width:140px;flex-shrink:0}
+.motion-spec{font-family:var(--font-mono);font-size:11px;color:var(--color-text-primary)}
+.motion-use{font-size:11px;color:var(--color-text-tertiary);margin-left:auto}
+
+.kw-item{padding:8px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.kw-item:last-child{border-bottom:none}
+.kw-term{font-family:var(--font-mono);font-size:12px;color:var(--color-text-primary);margin-bottom:3px}
+.kw-meta{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:3px}
+.kw-vol{font-size:10px;font-weight:500;padding:1px 6px;border-radius:3px;background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-secondary)}
+.kw-kd{font-size:10px;padding:1px 6px;border-radius:3px;font-weight:500}
+.kw-note{font-size:11px;color:var(--color-text-secondary);line-height:1.5}
+
+.seo-check{display:flex;align-items:flex-start;gap:8px;padding:5px 0;border-bottom:0.5px solid var(--color-border-tertiary);font-size:12px;color:var(--color-text-secondary)}
+.seo-check:last-child{border-bottom:none}
+.check-icon{width:14px;height:14px;border-radius:50%;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:500}
+.check-g{background:#dcfce7;color:#166534}
+.check-a{background:#fef3c7;color:#92400e}
+</style>
+
+<div class="w">
+<div class="nav">
+  <button class="tab on" onclick="show(0)">Design tokens</button>
+  <button class="tab" onclick="show(1)">Typography</button>
+  <button class="tab" onclick="show(2)">Components</button>
+  <button class="tab" onclick="show(3)">Layout system</button>
+  <button class="tab" onclick="show(4)">Motion</button>
+  <button class="tab" onclick="show(5)">Page anatomy</button>
+  <button class="tab" onclick="show(6)">Advanced SEO</button>
+  <button class="tab" onclick="show(7)">Content plan</button>
+  <button class="tab" onclick="show(8)">Initial push</button>
+</div>
+
+<!-- DESIGN TOKENS -->
+<div class="pg on" id="p0">
+  <div class="ph"><div><div class="ph-sub">Design tokens</div><div class="ph-title">The complete token system</div></div></div>
+  <div class="note g">Every visual decision in code should reference a token, never a raw value. These tokens live in globals.css and override shadcn's defaults. Every component reads from here.</div>
+
+  <div class="sl">Colour — semantic palette</div>
+  <div class="swatch-grid">
+    <div class="sw-wrap"><div class="sw" style="background:#0D1F3C"></div><div class="sw-lbl">--ink<br>#0D1F3C</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#1B3A6B"></div><div class="sw-lbl">--navy<br>#1B3A6B</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#2563EB"></div><div class="sw-lbl">--action<br>#2563EB</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#DBEAFE"></div><div class="sw-lbl">--tint<br>#DBEAFE</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#16A34A"></div><div class="sw-lbl">--gain<br>#16A34A</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#DCFCE7"></div><div class="sw-lbl">--gain-bg<br>#DCFCE7</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#DC2626"></div><div class="sw-lbl">--loss<br>#DC2626</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#FEE2E2"></div><div class="sw-lbl">--loss-bg<br>#FEE2E2</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#D97706"></div><div class="sw-lbl">--amber<br>#D97706</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#FEF3C7"></div><div class="sw-lbl">--amber-bg<br>#FEF3C7</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#F8FAFC"></div><div class="sw-lbl">--surface<br>#F8FAFC</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#F1F5F9"></div><div class="sw-lbl">--surface-2<br>#F1F5F9</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#E2E8F0"></div><div class="sw-lbl">--border<br>#E2E8F0</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#CBD5E1"></div><div class="sw-lbl">--border-2<br>#CBD5E1</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#64748B"></div><div class="sw-lbl">--muted<br>#64748B</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#94A3B8"></div><div class="sw-lbl">--subtle<br>#94A3B8</div></div>
+  </div>
+
+  <div class="sl">Dark mode equivalents</div>
+  <div class="swatch-grid">
+    <div class="sw-wrap"><div class="sw" style="background:#F8FAFC"></div><div class="sw-lbl">--ink<br>dark</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#E2E8F0"></div><div class="sw-lbl">--navy<br>dark</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#3B82F6"></div><div class="sw-lbl">--action<br>dark</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#1E3A5F"></div><div class="sw-lbl">--tint<br>dark</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#22C55E"></div><div class="sw-lbl">--gain<br>dark</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#14532D"></div><div class="sw-lbl">--gain-bg<br>dark</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#0F172A"></div><div class="sw-lbl">--surface<br>dark</div></div>
+    <div class="sw-wrap"><div class="sw" style="background:#1E293B"></div><div class="sw-lbl">--surface-2<br>dark</div></div>
+  </div>
+
+  <div class="sl">globals.css — complete token file</div>
+  <div class="ft"><span class="cm">/* financechk design tokens — shadcn override */</span>
+@import url('https://fonts.googleapis.com/...');
+
+@layer base {
+  :root {
+    <span class="cm">/* shadcn required */</span>
+    --background:       210 40% 98%;
+    --foreground:       222 47% 15%;
+    --card:             0 0% 100%;
+    --card-foreground:  222 47% 15%;
+    --popover:          0 0% 100%;
+    --primary:          221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary:        214 32% 91%;
+    --secondary-foreground: 222 47% 15%;
+    --muted:            215 16% 95%;
+    --muted-foreground: 215 16% 47%;
+    --accent:           221 83% 53%;
+    --destructive:      0 72% 51%;
+    --border:           214 32% 91%;
+    --input:            214 32% 91%;
+    --ring:             221 83% 53%;
+    --radius:           0.625rem;
+
+    <span class="cm">/* finance custom tokens */</span>
+    --fc-ink:           #0D1F3C;
+    --fc-navy:          #1B3A6B;
+    --fc-action:        #2563EB;
+    --fc-tint:          #DBEAFE;
+    --fc-gain:          #16A34A;
+    --fc-gain-bg:       #DCFCE7;
+    --fc-gain-text:     #14532D;
+    --fc-loss:          #DC2626;
+    --fc-loss-bg:       #FEE2E2;
+    --fc-loss-text:     #7F1D1D;
+    --fc-amber:         #D97706;
+    --fc-amber-bg:      #FEF3C7;
+    --fc-surface:       #F8FAFC;
+    --fc-surface-2:     #F1F5F9;
+    --fc-border:        #E2E8F0;
+    --fc-border-2:      #CBD5E1;
+    --fc-muted:         #64748B;
+    --fc-subtle:        #94A3B8;
+
+    <span class="cm">/* typography */</span>
+    --fc-font-display:  'Playfair Display', Georgia, serif;
+    --fc-font-body:     'Plus Jakarta Sans', system-ui, sans-serif;
+    --fc-font-mono:     'JetBrains Mono', 'Fira Code', monospace;
+
+    <span class="cm">/* spacing scale (8px base) */</span>
+    --fc-space-1:  4px;
+    --fc-space-2:  8px;
+    --fc-space-3:  12px;
+    --fc-space-4:  16px;
+    --fc-space-5:  24px;
+    --fc-space-6:  32px;
+    --fc-space-7:  48px;
+    --fc-space-8:  64px;
+    --fc-space-9:  96px;
+
+    <span class="cm">/* radius */</span>
+    --fc-r-xs:    4px;
+    --fc-r-sm:    6px;
+    --fc-r-md:    10px;
+    --fc-r-lg:    16px;
+    --fc-r-xl:    24px;
+    --fc-r-full:  9999px;
+
+    <span class="cm">/* shadows */</span>
+    --fc-shadow-xs: 0 1px 2px rgba(13,31,60,.05);
+    --fc-shadow-sm: 0 1px 3px rgba(13,31,60,.08),
+                    0 1px 2px rgba(13,31,60,.04);
+    --fc-shadow-md: 0 4px 6px rgba(13,31,60,.07),
+                    0 2px 4px rgba(13,31,60,.04);
+    --fc-shadow-lg: 0 10px 15px rgba(13,31,60,.08),
+                    0 4px 6px rgba(13,31,60,.04);
+
+    <span class="cm">/* layout */</span>
+    --fc-tool-width:    780px;
+    --fc-content-width: 680px;
+    --fc-page-width:    1200px;
+    --fc-sidebar-width: 300px;
+
+    <span class="cm">/* z-index */</span>
+    --fc-z-base:     0;
+    --fc-z-tooltip:  10;
+    --fc-z-sticky:   20;
+    --fc-z-modal:    30;
+    --fc-z-toast:    40;
+
+    <span class="cm">/* transitions */</span>
+    --fc-ease:      cubic-bezier(0.16, 1, 0.3, 1);
+    --fc-ease-in:   cubic-bezier(0.4, 0, 1, 1);
+    --fc-ease-out:  cubic-bezier(0, 0, 0.2, 1);
+    --fc-duration:  150ms;
+    --fc-duration-md: 250ms;
+    --fc-duration-lg: 400ms;
+  }
+
+  .dark {
+    --background:       222 47% 7%;
+    --foreground:       210 40% 98%;
+    --fc-ink:           #F8FAFC;
+    --fc-navy:          #E2E8F0;
+    --fc-action:        #3B82F6;
+    --fc-tint:          #1E3A5F;
+    --fc-gain:          #22C55E;
+    --fc-gain-bg:       #14532D;
+    --fc-gain-text:     #DCFCE7;
+    --fc-loss:          #F87171;
+    --fc-loss-bg:       #7F1D1D;
+    --fc-loss-text:     #FEE2E2;
+    --fc-surface:       #0F172A;
+    --fc-surface-2:     #1E293B;
+    --fc-border:        #1E293B;
+    --fc-border-2:      #334155;
+    --fc-muted:         #94A3B8;
+    --fc-subtle:        #64748B;
+  }
+}</div>
+</div>
+
+<!-- TYPOGRAPHY -->
+<div class="pg" id="p1">
+  <div class="ph"><div><div class="ph-sub">Typography system</div><div class="ph-title">The 3-font hierarchy</div></div></div>
+  <div class="note g">Playfair Display → editorial authority. Plus Jakarta Sans → modern, readable, not generic. JetBrains Mono → financial data feels precise. Three fonts, one role each, never overlap.</div>
+
+  <div class="sl">Live type scale</div>
+  <div class="type-demo">
+    <div class="type-row">
+      <div class="type-sample" style="font-size:28px;font-weight:700;font-family:Georgia,serif;letter-spacing:-0.5px;line-height:1.2">Home Loan Eligibility Calculator</div>
+      <div class="type-meta"><div class="type-name">display-xl</div><div class="type-spec">Playfair · 28px · 700<br>H1 page titles only</div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-sample" style="font-size:22px;font-weight:700;font-family:Georgia,serif;letter-spacing:-0.3px;line-height:1.3">Best Tax-Saving Investments FY25</div>
+      <div class="type-meta"><div class="type-name">display-lg</div><div class="type-spec">Playfair · 22px · 700<br>Article H1s</div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-sample" style="font-size:18px;font-weight:600;line-height:1.4">How the calculation works</div>
+      <div class="type-meta"><div class="type-name">heading-lg</div><div class="type-spec">Jakarta Sans · 18px · 600<br>H2 sections</div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-sample" style="font-size:15px;font-weight:600;line-height:1.4">Loan amount</div>
+      <div class="type-meta"><div class="type-name">heading-md</div><div class="type-spec">Jakarta Sans · 15px · 600<br>H3, input labels</div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-sample" style="font-size:13px;line-height:1.7;color:var(--color-text-secondary)">The principal amount is the original loan amount borrowed from the bank. It does not include any interest. In India, home loans typically range from ₹10 lakh to ₹5 crore.</div>
+      <div class="type-meta"><div class="type-name">body</div><div class="type-spec">Jakarta Sans · 13px · 400<br>All body copy</div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-sample" style="font-size:11px;line-height:1.6;color:var(--color-text-secondary)">Data as of April 2025. Rates subject to change. This is not financial advice.</div>
+      <div class="type-meta"><div class="type-name">caption</div><div class="type-spec">Jakarta Sans · 11px · 400<br>Disclaimers, footnotes</div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-sample" style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--color-text-secondary)">Loan details</div>
+      <div class="type-meta"><div class="type-name">eyebrow</div><div class="type-spec">Jakarta Sans · 10px · 600<br>Section labels, caps</div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-sample" style="font-size:32px;font-weight:700;font-family:var(--font-mono);letter-spacing:-1px;color:#0D1F3C">₹ 42,131</div>
+      <div class="type-meta"><div class="type-name">result-xl</div><div class="type-spec">JetBrains Mono · 32px · 700<br>Primary result only</div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-sample" style="font-size:20px;font-weight:600;font-family:var(--font-mono);color:var(--color-text-secondary)">₹ 1,01,14,960</div>
+      <div class="type-meta"><div class="type-name">result-lg</div><div class="type-spec">JetBrains Mono · 20px · 600<br>Secondary results</div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-sample" style="font-size:13px;font-family:var(--font-mono);color:var(--color-text-secondary)">8.50% · 240 months · ₹50,00,000</div>
+      <div class="type-meta"><div class="type-name">data-sm</div><div class="type-spec">JetBrains Mono · 13px · 400<br>Table data, params</div></div>
+    </div>
+  </div>
+
+  <div class="sl">Font loading (via @fontsource — no Google CDN)</div>
+  <div class="ft"><span class="k">import</span> '@fontsource/playfair-display/700.css';
+<span class="k">import</span> '@fontsource/playfair-display/400.css';
+<span class="k">import</span> '@fontsource/plus-jakarta-sans/400.css';
+<span class="k">import</span> '@fontsource/plus-jakarta-sans/500.css';
+<span class="k">import</span> '@fontsource/plus-jakarta-sans/600.css';
+<span class="k">import</span> '@fontsource/jetbrains-mono/400.css';
+<span class="k">import</span> '@fontsource/jetbrains-mono/600.css';
+<span class="k">import</span> '@fontsource/jetbrains-mono/700.css';
+
+<span class="cm">/* Apply in globals.css */</span>
+body { font-family: var(--fc-font-body); }
+h1   { font-family: var(--fc-font-display); }
+.mono, .result { font-family: var(--fc-font-mono); }</div>
+
+  <div class="sl">Line height + letter spacing rules</div>
+  <ul class="cl">
+    <li><span class="d g"></span>Display headings: <span class="code">line-height: 1.15</span> · <span class="code">letter-spacing: -0.03em</span> — tight, editorial</li>
+    <li><span class="d g"></span>UI headings (H2–H3): <span class="code">line-height: 1.35</span> · <span class="code">letter-spacing: -0.01em</span></li>
+    <li><span class="d g"></span>Body text: <span class="code">line-height: 1.7</span> · no letter-spacing — maximum readability</li>
+    <li><span class="d g"></span>Eyebrows / labels: <span class="code">letter-spacing: 0.08em</span> · always <span class="code">text-transform: uppercase</span></li>
+    <li><span class="d g"></span>Monospace numbers: <span class="code">letter-spacing: -0.04em</span> — tighter than default mono for ₹ amounts</li>
+    <li><span class="d a"></span>Never mix font families in a single text block — display for titles, body for everything else</li>
+  </ul>
+</div>
+
+<!-- COMPONENTS -->
+<div class="pg" id="p2">
+  <div class="ph"><div><div class="ph-sub">Component library</div><div class="ph-title">Every component defined</div></div></div>
+  <div class="note">shadcn gives you the primitives. These are the finance-specific wrappers built on top. Define variants in CVA (class-variance-authority) — same pattern shadcn uses internally.</div>
+
+  <div class="sl">Calculator input components</div>
+  <div class="comp-grid">
+    <div class="comp-c">
+      <div class="comp-n">SliderField</div>
+      <div class="comp-d">shadcn Slider + Input synced. Props: label, min, max, step, unit (₹ / % / yr), format fn. Slider and input stay in sync both ways. Shows formatted value live.</div>
+      <div class="comp-tag">variants: default | compact</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">CurrencyInput</div>
+      <div class="comp-d">shadcn Input with ₹ prefix. Formats to Indian numbering (1,00,000 not 100,000) on blur. Accepts raw number, displays formatted. Paste-safe.</div>
+      <div class="comp-tag">variants: default | large</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">PercentInput</div>
+      <div class="comp-d">Input with % suffix, step 0.05, min 0, max 30. Stepper buttons (+/-). Used for interest rates, return expectations.</div>
+      <div class="comp-tag">variants: default | inline</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">TenureInput</div>
+      <div class="comp-d">Dual mode: toggle between months and years. Syncs both values. Used for loan tenure, investment period.</div>
+      <div class="comp-tag">variants: months | years</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">RegimeToggle</div>
+      <div class="comp-d">shadcn Tabs styled as pill toggle. Old Regime / New Regime. Animates result card when switching. Used in income tax calculator.</div>
+      <div class="comp-tag">variants: regime | segment | mode</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">InstrumentSelect</div>
+      <div class="comp-d">shadcn Select with searchable instrument list. NSE/MCX/BSE groups. Used in brokerage + margin calculators. Populates lot size automatically.</div>
+      <div class="comp-tag">groups: NSE | MCX | BSE</div>
+    </div>
+  </div>
+
+  <div class="sl">Result display components</div>
+  <div class="comp-grid">
+    <div class="comp-c">
+      <div class="comp-n">ResultCard</div>
+      <div class="comp-d">The primary result block. JetBrains Mono number (32px), label above, context string below. Variants: default | gain (green tint) | loss (red tint) | neutral (blue tint).</div>
+      <div class="comp-tag">variants: default | gain | loss | neutral</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">ResultGrid</div>
+      <div class="comp-d">2–4 ResultCards in a responsive grid. Used when multiple outputs needed (EMI + total interest + total payment).</div>
+      <div class="comp-tag">cols: 2 | 3 | 4 auto</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">AmortizationTable</div>
+      <div class="comp-d">TanStack Virtual + shadcn Table. Sticky header. 3 columns: EMI No., Principal, Interest, Balance. Paginated by year. Export to CSV button.</div>
+      <div class="comp-tag">virtualized · exportable</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">PayoffChart</div>
+      <div class="comp-d">Recharts AreaChart. Principal paid (blue) vs interest paid (amber) over time. Responsive. No animation on initial load (CLS-safe).</div>
+      <div class="comp-tag">Recharts · responsive</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">ComparisonBar</div>
+      <div class="comp-d">Two values side by side with proportional bar. "Old regime saves ₹12,400 vs new regime." Animates in on mount with reduced-motion check.</div>
+      <div class="comp-tag">animated · accessible</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">BreakevenIndicator</div>
+      <div class="comp-d">Visual timeline showing: "Your investment breaks even in 4.2 years." Line with marker. Used in prepay vs invest calculator.</div>
+      <div class="comp-tag">SVG-based · scalable</div>
+    </div>
+  </div>
+
+  <div class="sl">Page-level components</div>
+  <div class="comp-grid">
+    <div class="comp-c">
+      <div class="comp-n">ToolLayout</div>
+      <div class="comp-d">Outer wrapper for all tool pages. Slot-based: header, tool area, content area (MDX), sidebar (ad + related tools), footer. Handles max-width, padding, responsive collapse.</div>
+      <div class="comp-tag">SSG-ready · responsive</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">ToolCard</div>
+      <div class="comp-d">Homepage grid item. Icon (Lucide), name, short description, category badge, arrow. Links to tool page. Hover: slight shadow + translate-y.</div>
+      <div class="comp-tag">hover animation · linked</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">FAQSection</div>
+      <div class="comp-d">shadcn Accordion + auto-generates FAQPage JSON-LD. Questions passed as props array. Renders as accessible accordion AND injects structured data.</div>
+      <div class="comp-tag">JSON-LD auto · accessible</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">AdUnit</div>
+      <div class="comp-d">Lazy-loaded AdSense wrapper. Fixed height placeholder prevents CLS. Respects prefers-reduced-motion. Slots: leaderboard | rectangle | square.</div>
+      <div class="comp-tag">CLS-safe · lazy loaded</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">ShareResult</div>
+      <div class="comp-d">Copies current URL (with inputs as search params) to clipboard. "Share this result" button below every calculator. Increases return traffic.</div>
+      <div class="comp-tag">URL state-based</div>
+    </div>
+    <div class="comp-c">
+      <div class="comp-n">LastUpdated</div>
+      <div class="comp-d">Small "Updated: April 2025" badge with calendar icon. Mandatory on all tool + article pages. E-E-A-T signal for Google on YMYL content.</div>
+      <div class="comp-tag">E-E-A-T · required</div>
+    </div>
+  </div>
+</div>
+
+<!-- LAYOUT SYSTEM -->
+<div class="pg" id="p3">
+  <div class="ph"><div><div class="ph-sub">Layout system</div><div class="ph-title">Grid, spacing, and shadows</div></div></div>
+
+  <div class="sl">Spacing scale (8px base unit)</div>
+  <div style="border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);overflow:hidden;margin-bottom:10px">
+    <div class="space-row" style="padding:.5rem 1rem"><div class="space-label">--space-1</div><div class="space-bar" style="width:4px;height:12px"></div><div class="space-value">4px · micro gaps, icon padding</div></div>
+    <div class="space-row" style="padding:.5rem 1rem"><div class="space-label">--space-2</div><div class="space-bar" style="width:8px;height:12px"></div><div class="space-value">8px · tight component gaps</div></div>
+    <div class="space-row" style="padding:.5rem 1rem"><div class="space-label">--space-3</div><div class="space-bar" style="width:12px;height:12px"></div><div class="space-value">12px · default gap between inputs</div></div>
+    <div class="space-row" style="padding:.5rem 1rem"><div class="space-label">--space-4</div><div class="space-bar" style="width:16px;height:12px"></div><div class="space-value">16px · card internal padding</div></div>
+    <div class="space-row" style="padding:.5rem 1rem"><div class="space-label">--space-5</div><div class="space-bar" style="width:24px;height:12px"></div><div class="space-value">24px · section gaps inside a card</div></div>
+    <div class="space-row" style="padding:.5rem 1rem"><div class="space-label">--space-6</div><div class="space-bar" style="width:32px;height:12px"></div><div class="space-value">32px · gap between tool and content</div></div>
+    <div class="space-row" style="padding:.5rem 1rem"><div class="space-label">--space-7</div><div class="space-bar" style="width:48px;height:12px"></div><div class="space-value">48px · major section separation</div></div>
+    <div class="space-row" style="padding:.5rem 1rem"><div class="space-label">--space-8</div><div class="space-bar" style="width:64px;height:12px"></div><div class="space-value">64px · page section padding</div></div>
+  </div>
+
+  <div class="sl">Shadow system</div>
+  <div class="shadow-demo">
+    <div class="sw-wrap">
+      <div class="shadow-box" style="box-shadow:0 1px 2px rgba(13,31,60,.05)">xs</div>
+      <div class="sw-lbl" style="font-size:10px;margin-top:4px">Tags, badges</div>
+    </div>
+    <div class="sw-wrap">
+      <div class="shadow-box" style="box-shadow:0 1px 3px rgba(13,31,60,.08),0 1px 2px rgba(13,31,60,.04)">sm</div>
+      <div class="sw-lbl" style="font-size:10px;margin-top:4px">Inputs, buttons</div>
+    </div>
+    <div class="sw-wrap">
+      <div class="shadow-box" style="box-shadow:0 4px 6px rgba(13,31,60,.07),0 2px 4px rgba(13,31,60,.04)">md</div>
+      <div class="sw-lbl" style="font-size:10px;margin-top:4px">Cards, tool box</div>
+    </div>
+    <div class="sw-wrap">
+      <div class="shadow-box" style="box-shadow:0 10px 15px rgba(13,31,60,.08),0 4px 6px rgba(13,31,60,.04)">lg</div>
+      <div class="sw-lbl" style="font-size:10px;margin-top:4px">Modals, popover</div>
+    </div>
+    <div class="sw-wrap">
+      <div class="shadow-box" style="box-shadow:0 0 0 2px #2563EB">focus</div>
+      <div class="sw-lbl" style="font-size:10px;margin-top:4px">Focus ring only</div>
+    </div>
+  </div>
+
+  <div class="sl">Border radius tokens</div>
+  <div class="swatch-grid">
+    <div class="sw-wrap"><div class="sw" style="border-radius:4px;background:var(--color-background-secondary)"></div><div class="sw-lbl">xs / 4px<br>Tags</div></div>
+    <div class="sw-wrap"><div class="sw" style="border-radius:6px;background:var(--color-background-secondary)"></div><div class="sw-lbl">sm / 6px<br>Inputs</div></div>
+    <div class="sw-wrap"><div class="sw" style="border-radius:10px;background:var(--color-background-secondary)"></div><div class="sw-lbl">md / 10px<br>Cards</div></div>
+    <div class="sw-wrap"><div class="sw" style="border-radius:16px;background:var(--color-background-secondary)"></div><div class="sw-lbl">lg / 16px<br>Tool wrap</div></div>
+    <div class="sw-wrap"><div class="sw" style="border-radius:24px;background:var(--color-background-secondary)"></div><div class="sw-lbl">xl / 24px<br>Hero</div></div>
+    <div class="sw-wrap"><div class="sw" style="border-radius:9999px;background:var(--color-background-secondary)"></div><div class="sw-lbl">full<br>Pills</div></div>
+  </div>
+
+  <div class="sl">Responsive breakpoints</div>
+  <div class="ft"><span class="cm">/* Tailwind v4 custom screens */</span>
+@theme {
+  --breakpoint-xs:  480px;  <span class="cm">/* small phones */</span>
+  --breakpoint-sm:  640px;  <span class="cm">/* large phones */</span>
+  --breakpoint-md:  768px;  <span class="cm">/* tablets */</span>
+  --breakpoint-lg:  1024px; <span class="cm">/* small desktop */</span>
+  --breakpoint-xl:  1280px; <span class="cm">/* standard desktop */</span>
+  --breakpoint-2xl: 1536px; <span class="cm">/* wide */</span>
+}
+
+<span class="cm">/* Tool layout responsive behaviour */</span>
+<span class="cm">/* mobile: single column, tool + content stacked */</span>
+<span class="cm">/* md: tool gets 60%, content 40%               */</span>
+<span class="cm">/* lg: tool + sidebar layout unlocks             */</span></div>
+</div>
+
+<!-- MOTION -->
+<div class="pg" id="p4">
+  <div class="ph"><div><div class="ph-sub">Motion system</div><div class="ph-title">Animation tokens and rules</div></div></div>
+  <div class="note a">Finance users skew older and more conservative. Motion should be functional — confirms an action, guides attention — never decorative. Every animation must have a prefers-reduced-motion fallback.</div>
+
+  <div class="sl">Easing curves</div>
+  <div class="motion-row"><div class="motion-label">--fc-ease (spring)</div><div class="motion-spec">cubic-bezier(0.16, 1, 0.3, 1)</div><div class="motion-use">Result reveals, card mount</div></div>
+  <div class="motion-row"><div class="motion-label">--fc-ease-out</div><div class="motion-spec">cubic-bezier(0, 0, 0.2, 1)</div><div class="motion-use">Dropdown open, tooltip</div></div>
+  <div class="motion-row"><div class="motion-label">--fc-ease-in</div><div class="motion-spec">cubic-bezier(0.4, 0, 1, 1)</div><div class="motion-use">Exit animations</div></div>
+  <div class="motion-row"><div class="motion-label">linear</div><div class="motion-spec">linear</div><div class="motion-use">Progress bars, sliders</div></div>
+
+  <div class="sl">Duration scale</div>
+  <div class="motion-row"><div class="motion-label">instant</div><div class="motion-spec">0ms</div><div class="motion-use">Input focus rings, border changes</div></div>
+  <div class="motion-row"><div class="motion-label">fast (--duration)</div><div class="motion-spec">150ms</div><div class="motion-use">Hover states, button feedback</div></div>
+  <div class="motion-row"><div class="motion-label">default (--duration-md)</div><div class="motion-spec">250ms</div><div class="motion-use">Result updates, tab switches</div></div>
+  <div class="motion-row"><div class="motion-label">slow (--duration-lg)</div><div class="motion-spec">400ms</div><div class="motion-use">Page transitions, chart draw</div></div>
+
+  <div class="sl">Specific interaction animations</div>
+  <div class="card">
+    <div class="ct">Result number update</div>
+    <div class="cd">When calculator inputs change → result number does NOT animate (jarring during slider drag). Instead: a subtle 80ms opacity pulse (0.6 → 1) on the result card confirms the value updated. Smooth, not distracting.</div>
+    <div class="ft" style="margin-top:8px"><span class="cm">/* result-pulse keyframe */</span>
+@keyframes result-pulse {
+  0%   { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+.result-updated {
+  animation: result-pulse 80ms var(--fc-ease-out);
+}</div>
+  </div>
+  <div class="card">
+    <div class="ct">Comparison bar entry</div>
+    <div class="cd">Width animates from 0 to final value on mount. 400ms spring ease. Only plays once on first render — not on input change. Uses CSS animation, not JS.</div>
+  </div>
+  <div class="card">
+    <div class="ct">ToolCard hover</div>
+    <div class="cd"><span class="code">transform: translateY(-2px)</span> + shadow-md on hover. 150ms ease-out. Scale is intentionally absent — scale on small cards looks amateur on finance sites.</div>
+  </div>
+  <div class="card">
+    <div class="ct">Chart draw (Recharts)</div>
+    <div class="cd">Set <span class="code">isAnimationActive={!prefersReducedMotion}</span> on all Recharts components. Chart draws left-to-right, 600ms. If reduced motion: instant render.</div>
+  </div>
+
+  <div class="sl">Reduced motion implementation</div>
+  <div class="ft"><span class="cm">/* globals.css */</span>
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+<span class="cm">/* React hook for JS animations */</span>
+<span class="k">const</span> usePrefersReducedMotion = () =>
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;</div>
+</div>
+
+<!-- PAGE ANATOMY -->
+<div class="pg" id="p5">
+  <div class="ph"><div><div class="ph-sub">Page anatomy</div><div class="ph-title">Every tool page, dissected</div></div></div>
+  <div class="note g">This is the exact structure every tool page follows. The order is intentional — tool above fold for Google ranking, content below for depth signals, related tools for internal linking.</div>
+
+  <div class="sl">Wireframe (schematic)</div>
+  <div class="page-mockup">
+    <div class="pm-header">
+      <div class="pm-logo">FinanceChk</div>
+      <div class="pm-nav"><span>Tools</span><span>Blog</span><span>About</span></div>
+    </div>
+    <div style="background:var(--color-background-primary);border-radius:8px;padding:.6rem .875rem;margin-bottom:8px;font-size:10px;color:var(--color-text-secondary)">
+      Home → Tools → Home Loan Eligibility Calculator
+    </div>
+    <div class="pm-body">
+      <div style="flex:1;min-width:0">
+        <div class="pm-tool">
+          <div class="pm-section-title">Tool title + description (H1 — Playfair)</div>
+          <div style="display:flex;gap:6px;margin-bottom:8px;font-size:10px;color:var(--color-text-tertiary)">
+            <span>Updated: Apr 2025</span><span>·</span><span>By Rajat</span>
+          </div>
+          <div class="pm-input"></div>
+          <div class="pm-input"></div>
+          <div class="pm-input"></div>
+          <div class="pm-result">
+            <div class="pm-result-num">₹ 42,13,440</div>
+            <div class="pm-result-lbl">Maximum loan eligibility</div>
+          </div>
+          <div style="margin-top:6px;font-size:10px;color:var(--color-text-tertiary);text-align:right">Share this result ↗</div>
+        </div>
+        <div style="margin:8px 0;background:var(--color-background-secondary);border:0.5px dashed var(--color-border-secondary);border-radius:6px;height:40px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--color-text-tertiary)">AdSense — leaderboard (728×90)</div>
+        <div style="background:var(--color-background-primary);border-radius:8px;padding:.75rem;font-size:11px;color:var(--color-text-secondary)">
+          <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--color-text-secondary);margin-bottom:8px">MDX content area</div>
+          <div style="color:var(--color-text-tertiary);font-size:10px;line-height:1.7">How this calculator works · Formula explained · Example calculation · Common mistakes · HowTo schema steps · [ad unit mid-content] · FAQ accordion (FAQPage schema) · Related tools cluster</div>
+        </div>
+      </div>
+      <div class="pm-aside">
+        <div class="pm-ad">AdSense rectangle<br>300×250</div>
+        <div class="pm-related">
+          <div class="pm-section-title">Related tools</div>
+          <span class="pm-link">SIP Calculator</span>
+          <span class="pm-link">Prepay vs Invest</span>
+          <span class="pm-link">Home Loan Tax Benefit</span>
+          <span class="pm-link">LTCG Calculator</span>
+        </div>
+        <div class="pm-ad">AdSense<br>mid-sticky</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sl">Content below fold — mandatory sections (in order)</div>
+  <div class="row"><div class="rn">1</div><div class="rb"><div class="rt">HowTo section (3–5 steps)</div><div class="rd">Marked up with HowTo schema. "Step 1: Enter your monthly take-home salary. Step 2: Enter your existing EMI obligations." Google can show this in rich results. Max 5 steps, each 1 sentence.</div></div></div>
+  <div class="row"><div class="rn">2</div><div class="rb"><div class="rt">Formula section</div><div class="rd">The actual formula, explained plainly. Not academic — practical. "Banks use: Loan = (Net Salary × 55%) ÷ EMI per lakh." Include a worked example with real numbers. This is what builds trust and backlinks.</div></div></div>
+  <div class="row"><div class="rn">3</div><div class="rb"><div class="rt">Contextual article (600–900 words)</div><div class="rd">Not just filler — genuinely answers the next question the user has. For eligibility calc: "Why does my employer's category matter?" Cite RBI guidelines directly.</div></div></div>
+  <div class="row"><div class="rn">4</div><div class="rb"><div class="rt">FAQ accordion (5–7 questions)</div><div class="rd">Answers questions people actually search. Pull from "People also ask" in Google. Each answer 2–3 sentences. FAQPage JSON-LD injected automatically by FAQSection component.</div></div></div>
+  <div class="row"><div class="rn">5</div><div class="rb"><div class="rt">Related tools cluster (4 links)</div><div class="rd">Always link to the natural next step. Eligibility → EMI → Prepay vs Invest → Tax benefit. This is your internal linking strategy — every page is a node in a cluster.</div></div></div>
+</div>
+
+<!-- ADVANCED SEO -->
+<div class="pg" id="p6">
+  <div class="ph"><div><div class="ph-sub">Advanced SEO</div><div class="ph-title">Every technique, implemented</div></div></div>
+
+  <div class="sl">Schema stack per page type</div>
+  <div class="card hi">
+    <div class="ct">Calculator tool pages — 4 schemas simultaneously</div>
+    <div class="cd">WebApplication + HowTo + FAQPage + BreadcrumbList. Most sites implement zero or one. Four simultaneously = maximum rich result eligibility. Output all from a single <span class="code">JsonLd</span> component.</div>
+    <div class="tags"><span class="tag ts">Almost no competition does this</span></div>
+  </div>
+  <div class="card">
+    <div class="ct">Blog articles — Article + FAQPage + BreadcrumbList + Speakable</div>
+    <div class="cd">Speakable schema marks specific sentences Google Assistant reads aloud. Wrap key result sentences (e.g. "The LTCG tax rate for equity mutual funds is 12.5% after ₹1 lakh exemption") in Speakable markup.</div>
+  </div>
+  <div class="card">
+    <div class="ct">Homepage — WebSite + SiteLinksSearchBox + Organization</div>
+    <div class="cd">SiteLinksSearchBox tells Google to show a search box directly in your SERP result. Users can search your tools without clicking through first. Significant CTR increase.</div>
+    <div class="tags"><span class="tag ti">SERP real estate</span></div>
+  </div>
+
+  <div class="sl">Technical SEO checklist</div>
+  <div class="seo-check"><div class="check-icon check-g">✓</div><div><strong>hreflang en-IN</strong> on every page — signals Indian English to Google, gets Indian SERP positioning over US results for same queries</div></div>
+  <div class="seo-check"><div class="check-icon check-g">✓</div><div><strong>Canonical URL</strong> on every page including paginated amortization tables — prevents duplicate content penalty</div></div>
+  <div class="seo-check"><div class="check-icon check-g">✓</div><div><strong>Sitemap with lastmod</strong> — update timestamp on every redeploy, tells Google to re-crawl changed pages first</div></div>
+  <div class="seo-check"><div class="check-icon check-g">✓</div><div><strong>robots.txt</strong> — noindex /og/, /api/, /_build/, ?share= param pages</div></div>
+  <div class="seo-check"><div class="check-icon check-g">✓</div><div><strong>Open Graph images</strong> — custom per tool using @vercel/og. Show tool name + sample result. Finance sites with custom OG get 40% more social CTR</div></div>
+  <div class="seo-check"><div class="check-icon check-g">✓</div><div><strong>Core Web Vitals</strong> — LCP target under 1.5s (SSG + CF edge), CLS = 0 (ad placeholders fixed height), INP under 150ms (sync calculator updates)</div></div>
+  <div class="seo-check"><div class="check-icon check-g">✓</div><div><strong>Internal anchor text strategy</strong> — every internal link uses keyword-rich anchor. Never "click here" or "read more". Always "home loan eligibility calculator" or "LTCG tax calculator"</div></div>
+  <div class="seo-check"><div class="check-icon check-a">!</div><div><strong>E-E-A-T signals</strong> — author byline with brief bio, "Last updated" date, source citations (RBI, SEBI, AMFI), disclaimer on financial content</div></div>
+  <div class="seo-check"><div class="check-icon check-a">!</div><div><strong>URL structure</strong> — /tools/home-loan-eligibility-calculator (no trailing slash, no params in canonical, keyword-first)</div></div>
+  <div class="seo-check"><div class="check-icon check-a">!</div><div><strong>Topical clusters</strong> — every article links to its parent tool, every tool links to 4 related tools + 1 article. No orphan pages ever</div></div>
+</div>
+
+<!-- CONTENT PLAN -->
+<div class="pg" id="p7">
+  <div class="ph"><div><div class="ph-sub">Content plan</div><div class="ph-title">Tools + articles — prioritised</div></div></div>
+  <div class="note a">No basic tools (EMI, SIP, FD). Every tool targets a specific, longer-tail decision moment that existing sites handle poorly. Each tool is the hub of a content cluster.</div>
+
+  <div class="sl">Tool cluster 1 — home loan intelligence</div>
+  <div class="content-card">
+    <span class="content-type ct-tool">Tool</span>
+    <div class="content-title">Home loan eligibility calculator (salary-based)</div>
+    <div class="content-kw">how much home loan can i get on 50000 salary</div>
+    <div class="content-why">Not a generic EMI calculator — user inputs net salary, existing EMIs, employer type (PSU/private/self-employed). Returns: max loan, recommended EMI, bank-wise eligibility comparison. Unique enough to rank on long-tail salary queries.</div>
+    <div class="content-meta"><span class="tag ts">Hub tool</span><span class="tag tk">Vol: 40K+/mo cluster</span><span class="tag ti">KD: low</span></div>
+  </div>
+  <div class="content-card">
+    <span class="content-type ct-art">Article</span>
+    <div class="content-title">Home loan eligibility criteria — all banks compared 2025</div>
+    <div class="content-kw">hdfc home loan eligibility criteria for salaried</div>
+    <div class="content-why">Embeds the eligibility tool. Compares HDFC, SBI, ICICI, Axis criteria side by side. Cites official bank pages. This is the article people share. Gets backlinks from personal finance blogs.</div>
+    <div class="content-meta"><span class="tag ti">Cluster article 1</span></div>
+  </div>
+  <div class="content-card">
+    <span class="content-type ct-art">Article</span>
+    <div class="content-title">Section 80C + 24b home loan tax benefit — with calculator</div>
+    <div class="content-kw">home loan tax benefit calculator 80c 24b 2025</div>
+    <div class="content-why">Embeds a dual-input tax benefit calculator (principal repayment + interest). Cites Income Tax Act sections directly. Seasonal spike every Jan–March. Unique tool within the article.</div>
+    <div class="content-meta"><span class="tag ti">Cluster article 2</span><span class="tag ts">Jan–Mar spike</span></div>
+  </div>
+
+  <div class="sl">Tool cluster 2 — investment decisions</div>
+  <div class="content-card">
+    <span class="content-type ct-tool">Tool</span>
+    <div class="content-title">Prepay home loan vs invest in mutual funds — dual calculator</div>
+    <div class="content-kw">is it better to prepay home loan or invest in mutual funds</div>
+    <div class="content-why">Two calculators side by side: interest saved by prepaying vs corpus built by investing. Breakeven year highlighted. This keyword is a decision moment with zero good interactive tools in the results today.</div>
+    <div class="content-meta"><span class="tag ts">Hub tool</span><span class="tag ti">KD: very low</span><span class="tag tk">Vol: 14K/mo</span></div>
+  </div>
+  <div class="content-card">
+    <span class="content-type ct-art">Article</span>
+    <div class="content-title">Mutual fund LTCG tax calculator — post budget 2024 rules</div>
+    <div class="content-kw">ltcg tax on mutual funds after budget 2024 with examples</div>
+    <div class="content-why">"With examples" modifier drops competition dramatically. Budget 2024 raised LTCG to 12.5% — most sites haven't updated. Embed the LTCG tool. Cite Finance Bill 2024 directly.</div>
+    <div class="content-meta"><span class="tag ti">Cluster article</span><span class="tag ts">Recency advantage</span></div>
+  </div>
+
+  <div class="sl">Tool cluster 3 — trading intelligence</div>
+  <div class="content-card">
+    <span class="content-type ct-tool">Tool</span>
+    <div class="content-title">Zerodha / Angel One / Upstox brokerage calculator — all segments</div>
+    <div class="content-kw">zerodha brokerage calculator for options intraday futures</div>
+    <div class="content-why">Broker selector + segment selector (equity delivery/intraday/F&O/MCX). Shows brokerage + STT + GST + stamp duty + SEBI charges. Compares across brokers. No site does all 3 brokers + all segments cleanly.</div>
+    <div class="content-meta"><span class="tag ts">Hub tool</span><span class="tag ti">Daily use = return visits</span><span class="tag tk">Vol: 22K/mo cluster</span></div>
+  </div>
+  <div class="content-card">
+    <span class="content-type ct-tool">Tool</span>
+    <div class="content-title">NSE F&O + MCX margin calculator</div>
+    <div class="content-kw">nse f&o margin calculator nifty bank nifty 2025</div>
+    <div class="content-why">SPAN + exposure margin per instrument. Pre-populated with Nifty, Bank Nifty, CRUDEOILM, NATURALGAS. Your CrudeBot knowledge = unfair advantage here. Nobody has built this cleanly.</div>
+    <div class="content-meta"><span class="tag ts">Unique tool</span><span class="tag ti">KD: very low</span></div>
+  </div>
+  <div class="content-card">
+    <span class="content-type ct-art">Article</span>
+    <div class="content-title">MCX crude oil intraday trading — lot size, margin, timing 2025</div>
+    <div class="content-kw">mcx crude oil intraday trading strategy lot size margin</div>
+    <div class="content-why">Your personal domain knowledge. Nobody writes this from experience. Embeds the position sizer + margin calculator. This article alone can drive 500+ daily traders to your tools. No competition at this quality.</div>
+    <div class="content-meta"><span class="tag ts">Moat content</span><span class="tag td">Only you can write this</span></div>
+  </div>
+
+  <div class="sl">Tool cluster 4 — tax decisions</div>
+  <div class="content-card">
+    <span class="content-type ct-tool">Tool</span>
+    <div class="content-title">Old vs new tax regime comparison — with salary breakdown</div>
+    <div class="content-kw">old vs new tax regime calculator with hra 80c deductions</div>
+    <div class="content-why">Not just a tax calculator — a comparison tool. User enters salary + all deductions + HRA. Side-by-side result with exact tax saved per regime. "Which is better for me" answered with their real numbers.</div>
+    <div class="content-meta"><span class="tag ts">Hub tool</span><span class="tag tk">Vol: 300K/mo cluster</span><span class="tag ti">Jan–Mar spike</span></div>
+  </div>
+  <div class="content-card">
+    <span class="content-type ct-art">Article</span>
+    <div class="content-title">How to do tax-loss harvesting in India — with calculator</div>
+    <div class="content-kw">tax loss harvesting india mutual funds stocks zerodha</div>
+    <div class="content-why">Concept is well known in the US, completely underserved for Indian context. Zerodha-specific workflow. Embeds LTCG calculator. Gets shared in investing communities. High backlink potential.</div>
+    <div class="content-meta"><span class="tag ts">Backlink magnet</span><span class="tag ti">Unique angle</span></div>
+  </div>
+</div>
+
+<!-- INITIAL PUSH -->
+<div class="pg" id="p8">
+  <div class="ph"><div><div class="ph-sub">Initial SEO push</div><div class="ph-title">First 90 days — getting indexed and ranking</div></div></div>
+  <div class="note g">The biggest mistake: publishing 10 thin pages. Better: 4 deeply built tool+content combos that Google can't ignore. Quality signals compound. Thin pages don't.</div>
+
+  <div class="sl">Week 1–2: Foundation indexing</div>
+  <div class="row"><div class="rn">1</div><div class="rb"><div class="rt">Submit to Google Search Console on deploy day</div><div class="rd">Add property, verify via DNS TXT record (Cloudflare makes this 2 clicks). Submit sitemap.xml immediately. Request manual indexing on each URL via URL Inspection tool — faster than waiting for crawl.</div></div></div>
+  <div class="row"><div class="rn">2</div><div class="rb"><div class="rt">Get 3 backlinks in week 1</div><div class="rd">List on IndieHackers, ProductHunt (upcoming), and one Indian finance directory (moneycontrol community, valueresearchonline forum). These first 3 links tell Google the domain is real and worth crawling.</div></div></div>
+  <div class="row"><div class="rn">3</div><div class="rb"><div class="rt">Create Google Business Profile</div><div class="rd">Even for a website — creates a Knowledge Panel, adds trust signal, shows in local searches for "finance calculator India." Takes 5 minutes.</div></div></div>
+  <div class="row"><div class="rn">4</div><div class="rb"><div class="rt">Set up Cloudflare Web Analytics + GSC</div><div class="rd">Track: which tools get traffic first, which keywords bring users, bounce rate per tool. This data shapes week 5–8 priorities. Don't fly blind.</div></div></div>
+
+  <div class="sl">Month 1: content for early impressions</div>
+  <div class="card hi">
+    <div class="ct">Publish in this exact order</div>
+    <div class="cd">Week 1: Brokerage calculator (trading audience = fast indexing, high return visits). Week 2: Old vs new tax regime comparison (evergreen high volume). Week 3: Home loan eligibility (long-tail salary queries). Week 4: MCX crude oil article (your moat — unique content Google hasn't seen).</div>
+    <div class="tags"><span class="tag ts">Trading tools index fastest</span><span class="tag ti">Tax tools get most volume</span></div>
+  </div>
+
+  <div class="sl">Month 2: signals and community</div>
+  <div class="row"><div class="rn">1</div><div class="rb"><div class="rt">Post in r/IndiaInvestments + r/IndianStreetBets</div><div class="rd">"I built a free brokerage calculator that shows Zerodha vs Angel One vs Upstox charges including STT and GST. No signup, no ads (except AdSense)." These communities upvote useful tools. Reddit backlinks are nofollow but drive real traffic and GSC impressions.</div></div></div>
+  <div class="row"><div class="rn">2</div><div class="rb"><div class="rt">Post MCX article in trading Telegram groups</div><div class="rd">There are 50k–200k member crude oil trading groups on Telegram. Post the article, link the position sizer tool. Traders share useful tools aggressively. This is free distribution to your exact audience.</div></div></div>
+  <div class="row"><div class="rn">3</div><div class="rb"><div class="rt">LinkedIn post — build in public</div><div class="rd">"I built financechk.com — here's why I avoided the 5 most competitive finance calculator keywords and what I targeted instead." Developer + finance audience on LinkedIn. Tag 3 finance creators. Gets reshared.</div></div></div>
+  <div class="row"><div class="rn">4</div><div class="rb"><div class="rt">DM 5 finance YouTubers (50k–300k subs)</div><div class="rd">"I built a free tool specifically for [their content niche]. Would love feedback. Happy to give you a shoutout or feature mention." 1 in 5 will mention it. That mention = backlink + 500–5000 visits.</div></div></div>
+
+  <div class="sl">Month 3: SERP monitoring + iteration</div>
+  <div class="card">
+    <div class="ct">GSC tells you what to build next</div>
+    <div class="cd">By month 3, GSC will show impressions for keywords you didn't explicitly target. These are gaps to fill. If you're getting impressions for "hdfc home loan eligibility self-employed" — build that sub-calculator. This is how you grow the cluster without guessing.</div>
+  </div>
+  <div class="card">
+    <div class="ct">Update cadence — mandatory</div>
+    <div class="cd">Tax pages: update every budget (Feb). Brokerage pages: verify charges every quarter (Zerodha updates occasionally). Margin pages: check NSE circulars monthly. Recency is a ranking factor for YMYL content. Add "last updated" date, update it, re-request indexing via GSC.</div>
+    <div class="tags"><span class="tag tw">Stale finance content loses rankings fast</span></div>
+  </div>
+
+  <div class="sl">Realistic traffic timeline</div>
+  <div class="g3">
+    <div class="met"><div class="ml">Month 1</div><div class="mv">0–200 visits</div><div class="ms">Indexing phase. GSC shows impressions. Real traffic not yet.</div></div>
+    <div class="met"><div class="ml">Month 2–3</div><div class="mv">500–2K/mo</div><div class="ms">Long-tail trading keywords start ranking. Reddit traffic.</div></div>
+    <div class="met"><div class="ml">Month 4–6</div><div class="mv">5K–15K/mo</div><div class="ms">Tax cluster kicks in (Jan season). First AdSense revenue.</div></div>
+    <div class="met"><div class="ml">Month 9–12</div><div class="mv">25K–60K/mo</div><div class="ms">Topical authority established. Salary queries ranking.</div></div>
+  </div>
+</div>
+</div>
+
+<script>
+function show(i){
+  document.querySelectorAll('.pg').forEach((p,j)=>p.classList.toggle('on',i===j));
+  document.querySelectorAll('.tab').forEach((t,j)=>t.classList.toggle('on',i===j));
+}
+</script>

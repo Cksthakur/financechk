@@ -1,0 +1,296 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Font imports — @fontsource (no external CDN) */
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/plus-jakarta-sans/400.css";
+@import "@fontsource/plus-jakarta-sans/500.css";
+@import "@fontsource/plus-jakarta-sans/600.css";
+@import "@fontsource/plus-jakarta-sans/700.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/600.css";
+@import "@fontsource/jetbrains-mono/700.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design System: ElevenLabs-inspired
+ * Near-white canvas, warm stone tints, multi-layer shadows at sub-0.1 opacity,
+ * pill buttons (9999px), light display headings, positive letter-spacing on body.
+ */
+
+@theme inline {
+  /* ── Typography ── */
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* ── shadcn color mapping ── */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* ── Radius — generous per ElevenLabs ── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-3xl: 30px;
+  --radius-4xl: 9999px;
+
+  /* ── Finance semantic colors ── */
+  --color-fc-gain: var(--fc-gain);
+  --color-fc-gain-bg: var(--fc-gain-bg);
+  --color-fc-gain-text: var(--fc-gain-text);
+  --color-fc-loss: var(--fc-loss);
+  --color-fc-loss-bg: var(--fc-loss-bg);
+  --color-fc-loss-text: var(--fc-loss-text);
+  --color-fc-amber: var(--fc-amber);
+  --color-fc-amber-bg: var(--fc-amber-bg);
+  --color-fc-surface: var(--fc-surface);
+  --color-fc-surface-2: var(--fc-surface-2);
+
+  /* ── ElevenLabs multi-layer shadow system ── */
+  /* Sub-0.1 opacity with warm undertones */
+  --shadow-fc-xs: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-fc-sm:
+    rgba(0,0,0,0.06) 0px 0px 0px 1px,
+    rgba(0,0,0,0.04) 0px 1px 2px,
+    rgba(0,0,0,0.04) 0px 2px 4px;
+  --shadow-fc-md:
+    rgba(0,0,0,0.075) 0px 0px 0px 0.5px inset,
+    rgba(0,0,0,0.06) 0px 0px 0px 1px,
+    rgba(0,0,0,0.04) 0px 4px 4px;
+  --shadow-fc-lg:
+    rgba(0,0,0,0.04) 0px 0px 0px 1px,
+    rgba(0,0,0,0.08) 0px 10px 15px,
+    rgba(0,0,0,0.04) 0px 4px 6px;
+  --shadow-fc-warm:
+    rgba(78,50,23,0.04) 0px 6px 16px;
+  --shadow-fc-card:
+    rgba(0,0,0,0.4) 0px 0px 1px,
+    rgba(0,0,0,0.04) 0px 4px 4px;
+}
+
+/* ── Light mode — ElevenLabs-inspired warm white ── */
+:root {
+  --background:       #ffffff;
+  --foreground:       #000000;
+  --card:             #ffffff;
+  --card-foreground:  #000000;
+  --popover:          #ffffff;
+  --popover-foreground: #000000;
+  --primary:          #000000;
+  --primary-foreground: #ffffff;
+  --secondary:        #f5f5f5;
+  --secondary-foreground: #000000;
+  --muted:            #f5f5f5;
+  --muted-foreground: #4e4e4e;
+  --accent:           rgba(245, 242, 239, 0.8);
+  --accent-foreground: #000000;
+  --destructive:      #DC2626;
+  --border:           #e5e5e5;
+  --input:            #e5e5e5;
+  --ring:             rgb(147 197 253 / 0.5);
+  --radius:           0.625rem;
+
+  --chart-1: #000000;
+  --chart-2: #16A34A;
+  --chart-3: #D97706;
+  --chart-4: #4e4e4e;
+  --chart-5: #DC2626;
+
+  --sidebar: #f5f5f5;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #000000;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f5f5f5;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: rgb(147 197 253 / 0.5);
+
+  /* Finance semantic tokens */
+  --fc-gain: #16A34A;
+  --fc-gain-bg: #DCFCE7;
+  --fc-gain-text: #14532D;
+  --fc-loss: #DC2626;
+  --fc-loss-bg: #FEE2E2;
+  --fc-loss-text: #7F1D1D;
+  --fc-amber: #D97706;
+  --fc-amber-bg: #FEF3C7;
+  --fc-surface: #f5f5f5;
+  --fc-surface-2: #f5f2ef;
+
+  /* Warm stone signature */
+  --fc-warm-stone: rgba(245, 242, 239, 0.8);
+  --fc-warm-gray: #777169;
+
+  /* Layout */
+  --fc-page-width: 1200px;
+  --fc-tool-width: 780px;
+  --fc-content-width: 680px;
+  --fc-sidebar-width: 300px;
+
+  /* Transitions — ElevenLabs spring easing */
+  --fc-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --fc-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --fc-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --fc-duration: 150ms;
+  --fc-duration-md: 250ms;
+  --fc-duration-lg: 400ms;
+}
+
+/* ── Dark mode ── */
+.dark {
+  --background:       #0a0a0a;
+  --foreground:       #fafafa;
+  --card:             #111111;
+  --card-foreground:  #fafafa;
+  --popover:          #111111;
+  --popover-foreground: #fafafa;
+  --primary:          #fafafa;
+  --primary-foreground: #0a0a0a;
+  --secondary:        #1a1a1a;
+  --secondary-foreground: #fafafa;
+  --muted:            #1a1a1a;
+  --muted-foreground: #a0a0a0;
+  --accent:           #1a1a1a;
+  --accent-foreground: #fafafa;
+  --destructive:      #F87171;
+  --border:           #262626;
+  --input:            #262626;
+  --ring:             rgb(147 197 253 / 0.3);
+
+  --chart-1: #fafafa;
+  --chart-2: #22C55E;
+  --chart-3: #FBBF24;
+  --chart-4: #a0a0a0;
+  --chart-5: #F87171;
+
+  --sidebar: #111111;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #fafafa;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #1a1a1a;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: #262626;
+  --sidebar-ring: rgb(147 197 253 / 0.3);
+
+  --fc-gain: #22C55E;
+  --fc-gain-bg: #14532D;
+  --fc-gain-text: #DCFCE7;
+  --fc-loss: #F87171;
+  --fc-loss-bg: #7F1D1D;
+  --fc-loss-text: #FEE2E2;
+  --fc-amber: #FBBF24;
+  --fc-amber-bg: #78350F;
+  --fc-surface: #111111;
+  --fc-surface-2: #1a1a1a;
+  --fc-warm-stone: rgba(30, 27, 24, 0.8);
+  --fc-warm-gray: #a0a0a0;
+}
+
+/* ── Base layer ── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    letter-spacing: 0.01em;
+  }
+  html {
+    @apply scroll-smooth;
+    font-family: var(--font-sans);
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  h2, h3 {
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+  }
+}
+
+/* ── ElevenLabs warm stone button utility ── */
+.btn-warm-stone {
+  background: var(--fc-warm-stone);
+  color: var(--foreground);
+  border-radius: 30px;
+  padding: 12px 20px 12px 14px;
+  box-shadow: var(--shadow-fc-warm);
+  transition: all var(--fc-duration) var(--fc-ease-out);
+}
+.btn-warm-stone:hover {
+  box-shadow: rgba(78,50,23,0.08) 0px 8px 20px;
+}
+
+/* ── Pill button utility ── */
+.btn-pill {
+  border-radius: 9999px;
+}
+
+/* ── Result pulse animation ── */
+@keyframes result-pulse {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+.result-updated {
+  animation: result-pulse 80ms var(--fc-ease-out);
+}
+
+/* ── Comparison bar entry animation ── */
+@keyframes bar-grow {
+  from { width: 0; }
+}
+.bar-animate {
+  animation: bar-grow 400ms var(--fc-ease) forwards;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

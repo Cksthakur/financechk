@@ -1,0 +1,1667 @@
+{
+  "meta": {
+    "title": "India Comprehensive Annual Financial Metrics Dataset",
+    "version": "2.0",
+    "coverage": "FY 2015-16 to FY 2025-26 (Calendar Year 2015–2025 where applicable)",
+    "currency": "INR unless stated otherwise",
+    "fiscal_year_note": "FY = April 1 to March 31. FY2016 = Apr 2015–Mar 2016",
+    "sources": ["RBI", "MOSPI", "SEBI", "NSE", "BSE", "CBDT", "Ministry of Finance", "Economic Survey", "World Bank", "IMF"],
+    "last_updated": "April 2026",
+    "disclaimer": "For educational/research use. Verify with official sources before financial decisions."
+  },
+
+  "annual_metrics": {
+
+    "FY2015_16": {
+      "fiscal_year": "FY 2015-16",
+      "calendar_year_approx": "CY 2015",
+
+      "macro": {
+        "real_gdp_growth_pct": 8.0,
+        "nominal_gdp_growth_pct": 10.5,
+        "gdp_usd_bn": 2103,
+        "gdp_inr_lakh_cr": 135.76,
+        "gdp_per_capita_usd": 1606,
+        "gva_growth_pct": 7.8,
+        "agriculture_gva_growth_pct": 0.6,
+        "industry_gva_growth_pct": 8.7,
+        "services_gva_growth_pct": 9.5
+      },
+
+      "inflation": {
+        "cpi_avg_pct": 4.9,
+        "cpi_food_avg_pct": 5.5,
+        "wpi_avg_pct": -2.5,
+        "core_cpi_pct": 4.2,
+        "rbi_target_pct": 6.0
+      },
+
+      "monetary": {
+        "repo_rate_start_pct": 7.75,
+        "repo_rate_end_pct": 6.75,
+        "repo_rate_change_bps": -100,
+        "reverse_repo_rate_end_pct": 5.75,
+        "crr_pct": 4.0,
+        "slr_pct": 21.5,
+        "m3_growth_pct": 11.3,
+        "bank_credit_growth_pct": 10.9,
+        "bank_deposit_growth_pct": 11.4
+      },
+
+      "govt_finances": {
+        "fiscal_deficit_pct_gdp": 3.9,
+        "revenue_deficit_pct_gdp": 2.5,
+        "primary_deficit_pct_gdp": 0.7,
+        "govt_debt_pct_gdp": 68.5,
+        "tax_gdp_ratio_pct": 10.8,
+        "capex_pct_gdp": 1.7,
+        "disinvestment_target_cr": 69500,
+        "disinvestment_actual_cr": 23997
+      },
+
+      "external_sector": {
+        "current_account_deficit_pct_gdp": -1.1,
+        "current_account_balance_usd_bn": -22.2,
+        "trade_deficit_usd_bn": -130.1,
+        "exports_usd_bn": 262.3,
+        "imports_usd_bn": 392.4,
+        "services_surplus_usd_bn": 69.7,
+        "remittances_usd_bn": 68.9,
+        "fdi_gross_inflow_usd_bn": 55.6,
+        "fdi_net_usd_bn": 36.0,
+        "fpi_net_usd_bn": -4.5,
+        "forex_reserves_end_usd_bn": 360.2,
+        "import_cover_months": 8.5,
+        "external_debt_usd_bn": 485.0,
+        "external_debt_gdp_pct": 23.1
+      },
+
+      "exchange_rate": {
+        "inr_usd_avg": 65.46,
+        "inr_usd_start": 63.0,
+        "inr_usd_end": 66.3,
+        "inr_depreciation_pct": 5.3,
+        "reer_change_pct": -3.8
+      },
+
+      "equity_markets": {
+        "nifty50_open": 8283,
+        "nifty50_close": 7946,
+        "nifty50_high": 9119,
+        "nifty50_low": 6826,
+        "nifty50_return_cy2015_pct": -4.1,
+        "sensex_close": 25342,
+        "sensex_return_cy2015_pct": -5.0,
+        "nifty_midcap100_return_pct": 7.5,
+        "nifty_smallcap100_return_pct": 6.8,
+        "nifty_pe_ratio_avg": 22.0,
+        "nifty_pb_ratio_avg": 3.2,
+        "nifty_div_yield_pct": 1.4,
+        "sensex_mcap_usd_bn": 1517,
+        "mcap_gdp_ratio_pct": 72.2,
+        "india_vix_avg": 17.5,
+        "india_vix_high": 30.3,
+        "india_vix_low": 12.5,
+        "bse_listed_cos": 5624,
+        "nse_advances_declines_ratio": 0.71,
+        "total_equity_turnover_cr": 4875000,
+        "fii_equity_net_cr": -36922,
+        "dii_equity_net_cr": 70069
+      },
+
+      "debt_markets": {
+        "gsec_10yr_yield_avg_pct": 7.82,
+        "gsec_10yr_yield_start_pct": 8.0,
+        "gsec_10yr_yield_end_pct": 7.46,
+        "gsec_1yr_yield_avg_pct": 7.55,
+        "corporate_bond_aaa_spread_bps": 55,
+        "gsec_total_issuance_cr": 600000,
+        "t_bill_91day_avg_pct": 7.48,
+        "overnight_call_rate_avg_pct": 7.2
+      },
+
+      "banking_sector": {
+        "gnpa_ratio_pct": 5.88,
+        "nnpa_ratio_pct": 3.09,
+        "crar_pct": 13.0,
+        "return_on_assets_pct": 0.42,
+        "return_on_equity_pct": 5.7,
+        "pcr_pct": 58.0,
+        "credit_deposit_ratio_pct": 77.7,
+        "psb_gnpa_ratio_pct": 7.30
+      },
+
+      "commodities": {
+        "gold_price_inr_10g_avg": 26000,
+        "gold_return_pct": -6.5,
+        "crude_oil_brent_usd_avg": 52.4,
+        "crude_oil_basket_india_usd": 46.2
+      },
+
+      "mutual_funds": {
+        "industry_aum_cr": 1274201,
+        "equity_aum_cr": 370000,
+        "sip_monthly_inflow_cr": 3121,
+        "nfo_mobilisation_cr": 32000,
+        "folios_total_mn": 46.5
+      },
+
+      "insurance": {
+        "life_insurance_premium_cr": 328000,
+        "non_life_premium_cr": 97000,
+        "insurance_penetration_pct_gdp": 3.44
+      },
+
+      "iip_unemp": {
+        "iip_growth_pct": 2.4,
+        "manufacturing_growth_pct": 2.0,
+        "unemployment_rate_pct": 5.0,
+        "urban_unemployment_pct": 5.9
+      },
+
+      "key_events": [
+        "RBI cut repo 100bps through year (8%→6.75%)",
+        "CPI targeting framework formalized",
+        "SEBI launches LODR regulations",
+        "Commodity super-cycle bust hit exports",
+        "China slowdown fears August crash (-5.9% Nifty single day)"
+      ]
+    },
+
+    "FY2016_17": {
+      "fiscal_year": "FY 2016-17",
+      "calendar_year_approx": "CY 2016",
+
+      "macro": {
+        "real_gdp_growth_pct": 8.3,
+        "nominal_gdp_growth_pct": 11.2,
+        "gdp_usd_bn": 2290,
+        "gdp_inr_lakh_cr": 152.51,
+        "gdp_per_capita_usd": 1732,
+        "gva_growth_pct": 7.9,
+        "agriculture_gva_growth_pct": 6.3,
+        "industry_gva_growth_pct": 7.7,
+        "services_gva_growth_pct": 9.4
+      },
+
+      "inflation": {
+        "cpi_avg_pct": 4.5,
+        "cpi_food_avg_pct": 5.0,
+        "wpi_avg_pct": 1.3,
+        "core_cpi_pct": 4.8,
+        "rbi_target_pct": 5.0
+      },
+
+      "monetary": {
+        "repo_rate_start_pct": 6.75,
+        "repo_rate_end_pct": 6.25,
+        "repo_rate_change_bps": -50,
+        "reverse_repo_rate_end_pct": 5.75,
+        "crr_pct": 4.0,
+        "slr_pct": 20.5,
+        "m3_growth_pct": 10.1,
+        "bank_credit_growth_pct": 8.8,
+        "bank_deposit_growth_pct": 15.3,
+        "note": "Demonetisation Nov 2016 caused deposit surge and credit contraction"
+      },
+
+      "govt_finances": {
+        "fiscal_deficit_pct_gdp": 3.5,
+        "revenue_deficit_pct_gdp": 2.1,
+        "primary_deficit_pct_gdp": 0.4,
+        "govt_debt_pct_gdp": 67.5,
+        "tax_gdp_ratio_pct": 11.3,
+        "capex_pct_gdp": 1.8,
+        "disinvestment_actual_cr": 45500
+      },
+
+      "external_sector": {
+        "current_account_deficit_pct_gdp": -0.7,
+        "current_account_balance_usd_bn": -15.2,
+        "trade_deficit_usd_bn": -112.4,
+        "exports_usd_bn": 276.2,
+        "imports_usd_bn": 388.6,
+        "services_surplus_usd_bn": 68.7,
+        "remittances_usd_bn": 62.7,
+        "fdi_gross_inflow_usd_bn": 60.1,
+        "fdi_net_usd_bn": 35.7,
+        "fpi_net_usd_bn": 7.6,
+        "forex_reserves_end_usd_bn": 370.0,
+        "import_cover_months": 9.5,
+        "external_debt_usd_bn": 471.0,
+        "external_debt_gdp_pct": 20.5
+      },
+
+      "exchange_rate": {
+        "inr_usd_avg": 67.07,
+        "inr_usd_start": 66.3,
+        "inr_usd_end": 64.8,
+        "inr_depreciation_pct": 2.4,
+        "reer_change_pct": -1.2
+      },
+
+      "equity_markets": {
+        "nifty50_open": 7946,
+        "nifty50_close": 8186,
+        "nifty50_high": 8968,
+        "nifty50_low": 6825,
+        "nifty50_return_cy2016_pct": 3.0,
+        "sensex_close": 26626,
+        "nifty_midcap100_return_pct": 10.0,
+        "nifty_smallcap100_return_pct": 7.5,
+        "nifty_pe_ratio_avg": 21.5,
+        "nifty_pb_ratio_avg": 3.0,
+        "nifty_div_yield_pct": 1.5,
+        "sensex_mcap_usd_bn": 1600,
+        "mcap_gdp_ratio_pct": 69.9,
+        "india_vix_avg": 16.0,
+        "india_vix_high": 25.6,
+        "india_vix_low": 11.6,
+        "fii_equity_net_cr": -18813,
+        "dii_equity_net_cr": 44030
+      },
+
+      "debt_markets": {
+        "gsec_10yr_yield_avg_pct": 7.04,
+        "gsec_10yr_yield_start_pct": 7.46,
+        "gsec_10yr_yield_end_pct": 6.68,
+        "corporate_bond_aaa_spread_bps": 60,
+        "t_bill_91day_avg_pct": 6.40
+      },
+
+      "banking_sector": {
+        "gnpa_ratio_pct": 9.32,
+        "nnpa_ratio_pct": 5.28,
+        "crar_pct": 13.2,
+        "return_on_assets_pct": 0.25,
+        "pcr_pct": 43.4,
+        "credit_deposit_ratio_pct": 73.4,
+        "psb_gnpa_ratio_pct": 11.70,
+        "note": "AQR (Asset Quality Review) by RBI began exposing hidden NPAs"
+      },
+
+      "commodities": {
+        "gold_price_inr_10g_avg": 28600,
+        "gold_return_pct": 10.0,
+        "crude_oil_brent_usd_avg": 44.0,
+        "crude_oil_basket_india_usd": 42.0
+      },
+
+      "mutual_funds": {
+        "industry_aum_cr": 1730000,
+        "equity_aum_cr": 530000,
+        "sip_monthly_inflow_cr": 4700,
+        "folios_total_mn": 53.3
+      },
+
+      "iip_unemp": {
+        "iip_growth_pct": 0.7,
+        "manufacturing_growth_pct": 0.5,
+        "unemployment_rate_pct": 5.4
+      },
+
+      "key_events": [
+        "Demonetisation Nov 8 2016 — Rs 500/1000 scrapped",
+        "RBI cut 50bps through year",
+        "Nifty Bank sector badly hit post-demonetisation",
+        "FII net sellers; DII absorbed",
+        "GNPA crisis deepens post-AQR"
+      ]
+    },
+
+    "FY2017_18": {
+      "fiscal_year": "FY 2017-18",
+      "calendar_year_approx": "CY 2017",
+
+      "macro": {
+        "real_gdp_growth_pct": 6.8,
+        "nominal_gdp_growth_pct": 10.0,
+        "gdp_usd_bn": 2652,
+        "gdp_inr_lakh_cr": 170.90,
+        "gdp_per_capita_usd": 1981,
+        "gva_growth_pct": 6.6,
+        "agriculture_gva_growth_pct": 5.9,
+        "industry_gva_growth_pct": 5.5,
+        "services_gva_growth_pct": 8.4,
+        "note": "Growth dip partly due to GST rollout disruption"
+      },
+
+      "inflation": {
+        "cpi_avg_pct": 3.3,
+        "cpi_food_avg_pct": 2.1,
+        "wpi_avg_pct": 2.9,
+        "core_cpi_pct": 4.5,
+        "rbi_target_pct": 4.0
+      },
+
+      "monetary": {
+        "repo_rate_start_pct": 6.25,
+        "repo_rate_end_pct": 6.0,
+        "repo_rate_change_bps": -25,
+        "reverse_repo_rate_end_pct": 5.75,
+        "crr_pct": 4.0,
+        "slr_pct": 20.0,
+        "m3_growth_pct": 9.2,
+        "bank_credit_growth_pct": 10.0,
+        "bank_deposit_growth_pct": 11.8
+      },
+
+      "govt_finances": {
+        "fiscal_deficit_pct_gdp": 3.46,
+        "revenue_deficit_pct_gdp": 2.1,
+        "primary_deficit_pct_gdp": 0.3,
+        "govt_debt_pct_gdp": 67.0,
+        "tax_gdp_ratio_pct": 11.6,
+        "capex_pct_gdp": 1.9,
+        "disinvestment_actual_cr": 100055,
+        "gst_annual_collections_cr": 778000,
+        "note": "GST launched Jul 1; full year collections partial"
+      },
+
+      "external_sector": {
+        "current_account_deficit_pct_gdp": -1.9,
+        "current_account_balance_usd_bn": -48.7,
+        "trade_deficit_usd_bn": -160.0,
+        "exports_usd_bn": 303.5,
+        "imports_usd_bn": 463.5,
+        "services_surplus_usd_bn": 77.3,
+        "remittances_usd_bn": 65.3,
+        "fdi_gross_inflow_usd_bn": 61.9,
+        "fdi_net_usd_bn": 30.3,
+        "fpi_net_usd_bn": 26.0,
+        "forex_reserves_end_usd_bn": 424.5,
+        "import_cover_months": 11.1,
+        "external_debt_usd_bn": 529.7,
+        "external_debt_gdp_pct": 20.0
+      },
+
+      "exchange_rate": {
+        "inr_usd_avg": 64.46,
+        "inr_usd_start": 64.8,
+        "inr_usd_end": 65.0,
+        "inr_depreciation_pct": 0.3,
+        "reer_change_pct": 2.0
+      },
+
+      "equity_markets": {
+        "nifty50_open": 8186,
+        "nifty50_close": 10531,
+        "nifty50_high": 10490,
+        "nifty50_low": 8555,
+        "nifty50_return_cy2017_pct": 28.6,
+        "sensex_close": 34057,
+        "nifty_midcap100_return_pct": 47.2,
+        "nifty_smallcap100_return_pct": 60.5,
+        "nifty_pe_ratio_avg": 26.0,
+        "nifty_pb_ratio_avg": 3.5,
+        "nifty_div_yield_pct": 1.2,
+        "sensex_mcap_usd_bn": 2050,
+        "mcap_gdp_ratio_pct": 77.3,
+        "india_vix_avg": 13.0,
+        "india_vix_high": 18.5,
+        "india_vix_low": 8.6,
+        "fii_equity_net_cr": 51252,
+        "dii_equity_net_cr": 56234,
+        "note": "Nifty crossed 10,000 for first time. Bull run year."
+      },
+
+      "debt_markets": {
+        "gsec_10yr_yield_avg_pct": 6.80,
+        "gsec_10yr_yield_start_pct": 6.68,
+        "gsec_10yr_yield_end_pct": 7.33,
+        "corporate_bond_aaa_spread_bps": 58,
+        "t_bill_91day_avg_pct": 6.20
+      },
+
+      "banking_sector": {
+        "gnpa_ratio_pct": 10.23,
+        "nnpa_ratio_pct": 5.88,
+        "crar_pct": 13.7,
+        "return_on_assets_pct": 0.02,
+        "pcr_pct": 44.5,
+        "psb_gnpa_ratio_pct": 12.50,
+        "note": "NPA ratio peaked — worst year for PSB health"
+      },
+
+      "commodities": {
+        "gold_price_inr_10g_avg": 29600,
+        "gold_return_pct": 3.5,
+        "crude_oil_brent_usd_avg": 54.7,
+        "crude_oil_basket_india_usd": 56.4
+      },
+
+      "mutual_funds": {
+        "industry_aum_cr": 2368000,
+        "equity_aum_cr": 810000,
+        "sip_monthly_inflow_cr": 5893,
+        "folios_total_mn": 63.8
+      },
+
+      "iip_unemp": {
+        "iip_growth_pct": 4.3,
+        "manufacturing_growth_pct": 4.6,
+        "unemployment_rate_pct": 5.3
+      },
+
+      "key_events": [
+        "GST unified indirect tax launched Jul 1 2017",
+        "Nifty crosses 10,000 for first time (Oct 2017)",
+        "Mid/small caps outperformed massively",
+        "RBI cut 25bps Aug 2017 to 6.0%",
+        "SEBI tightens P-Note rules — FPI inflows moderate"
+      ]
+    },
+
+    "FY2018_19": {
+      "fiscal_year": "FY 2018-19",
+      "calendar_year_approx": "CY 2018",
+
+      "macro": {
+        "real_gdp_growth_pct": 6.5,
+        "nominal_gdp_growth_pct": 11.0,
+        "gdp_usd_bn": 2702,
+        "gdp_inr_lakh_cr": 188.87,
+        "gdp_per_capita_usd": 1997,
+        "gva_growth_pct": 6.3,
+        "agriculture_gva_growth_pct": 2.6,
+        "industry_gva_growth_pct": 6.5,
+        "services_gva_growth_pct": 7.5
+      },
+
+      "inflation": {
+        "cpi_avg_pct": 3.4,
+        "cpi_food_avg_pct": 1.8,
+        "wpi_avg_pct": 4.3,
+        "core_cpi_pct": 5.8,
+        "rbi_target_pct": 4.0
+      },
+
+      "monetary": {
+        "repo_rate_start_pct": 6.0,
+        "repo_rate_end_pct": 6.5,
+        "repo_rate_change_bps": 50,
+        "reverse_repo_rate_end_pct": 6.25,
+        "crr_pct": 4.0,
+        "slr_pct": 19.5,
+        "m3_growth_pct": 10.5,
+        "bank_credit_growth_pct": 13.2,
+        "bank_deposit_growth_pct": 9.6
+      },
+
+      "govt_finances": {
+        "fiscal_deficit_pct_gdp": 3.4,
+        "revenue_deficit_pct_gdp": 2.2,
+        "primary_deficit_pct_gdp": 0.2,
+        "govt_debt_pct_gdp": 68.5,
+        "tax_gdp_ratio_pct": 12.1,
+        "capex_pct_gdp": 1.7,
+        "disinvestment_actual_cr": 80000,
+        "gst_annual_collections_cr": 997000
+      },
+
+      "external_sector": {
+        "current_account_deficit_pct_gdp": -2.1,
+        "current_account_balance_usd_bn": -57.2,
+        "trade_deficit_usd_bn": -180.3,
+        "exports_usd_bn": 331.0,
+        "imports_usd_bn": 511.3,
+        "services_surplus_usd_bn": 81.6,
+        "remittances_usd_bn": 78.6,
+        "fdi_gross_inflow_usd_bn": 62.0,
+        "fdi_net_usd_bn": 30.7,
+        "fpi_net_usd_bn": -9.0,
+        "forex_reserves_end_usd_bn": 404.5,
+        "import_cover_months": 9.4,
+        "external_debt_usd_bn": 521.2,
+        "external_debt_gdp_pct": 19.3
+      },
+
+      "exchange_rate": {
+        "inr_usd_avg": 69.89,
+        "inr_usd_start": 65.0,
+        "inr_usd_end": 70.2,
+        "inr_depreciation_pct": 8.0,
+        "reer_change_pct": -6.3,
+        "inr_high_usd": 74.5
+      },
+
+      "equity_markets": {
+        "nifty50_open": 10531,
+        "nifty50_close": 10863,
+        "nifty50_high": 11760,
+        "nifty50_low": 9952,
+        "nifty50_return_cy2018_pct": 3.2,
+        "sensex_close": 36068,
+        "nifty_midcap100_return_pct": -13.6,
+        "nifty_smallcap100_return_pct": -29.4,
+        "nifty_pe_ratio_avg": 27.0,
+        "nifty_pb_ratio_avg": 3.6,
+        "nifty_div_yield_pct": 1.2,
+        "sensex_mcap_usd_bn": 2083,
+        "mcap_gdp_ratio_pct": 77.1,
+        "india_vix_avg": 15.4,
+        "india_vix_high": 28.1,
+        "india_vix_low": 8.9,
+        "fii_equity_net_cr": -32952,
+        "dii_equity_net_cr": 109055,
+        "note": "Large-caps resilient; mid/smallcaps destroyed by IL&FS crisis"
+      },
+
+      "debt_markets": {
+        "gsec_10yr_yield_avg_pct": 7.82,
+        "gsec_10yr_yield_start_pct": 7.33,
+        "gsec_10yr_yield_end_pct": 7.58,
+        "corporate_bond_aaa_spread_bps": 95,
+        "corporate_bond_aa_spread_bps": 175,
+        "t_bill_91day_avg_pct": 7.20,
+        "note": "IL&FS default caused massive credit spread widening"
+      },
+
+      "banking_sector": {
+        "gnpa_ratio_pct": 11.18,
+        "nnpa_ratio_pct": 6.01,
+        "crar_pct": 13.8,
+        "return_on_assets_pct": -0.15,
+        "psb_gnpa_ratio_pct": 14.58,
+        "note": "PSBs posted aggregate losses. NPA ratio at multi-decade high."
+      },
+
+      "commodities": {
+        "gold_price_inr_10g_avg": 31200,
+        "gold_return_pct": 7.5,
+        "crude_oil_brent_usd_avg": 71.0,
+        "crude_oil_basket_india_usd": 68.8,
+        "crude_inr_impact": "Higher oil widened CAD and weakened INR"
+      },
+
+      "mutual_funds": {
+        "industry_aum_cr": 2286000,
+        "equity_aum_cr": 816000,
+        "sip_monthly_inflow_cr": 7727,
+        "folios_total_mn": 75.2
+      },
+
+      "iip_unemp": {
+        "iip_growth_pct": 4.3,
+        "manufacturing_growth_pct": 4.5,
+        "unemployment_rate_pct": 6.1
+      },
+
+      "key_events": [
+        "LTCG on equity reintroduced at 10% (Budget Feb 2018)",
+        "IL&FS default Sep 2018 — NBFC credit freeze",
+        "RBI hiked repo 50bps (two hikes)",
+        "INR hit 74.5/USD all-time low at the time",
+        "Mid/smallcap indices crashed 25-40%"
+      ]
+    },
+
+    "FY2019_20": {
+      "fiscal_year": "FY 2019-20",
+      "calendar_year_approx": "CY 2019",
+
+      "macro": {
+        "real_gdp_growth_pct": 4.0,
+        "nominal_gdp_growth_pct": 7.2,
+        "gdp_usd_bn": 2836,
+        "gdp_inr_lakh_cr": 211.00,
+        "gdp_per_capita_usd": 2065,
+        "gva_growth_pct": 3.7,
+        "agriculture_gva_growth_pct": 4.0,
+        "industry_gva_growth_pct": 1.0,
+        "services_gva_growth_pct": 5.5,
+        "note": "Weakest GDP growth since GFC. NBFC credit crunch hurt consumption."
+      },
+
+      "inflation": {
+        "cpi_avg_pct": 4.8,
+        "cpi_food_avg_pct": 6.2,
+        "wpi_avg_pct": 1.7,
+        "core_cpi_pct": 3.7,
+        "rbi_target_pct": 4.0
+      },
+
+      "monetary": {
+        "repo_rate_start_pct": 6.5,
+        "repo_rate_end_pct": 5.15,
+        "repo_rate_change_bps": -135,
+        "reverse_repo_rate_end_pct": 4.9,
+        "crr_pct": 4.0,
+        "slr_pct": 18.75,
+        "m3_growth_pct": 8.9,
+        "bank_credit_growth_pct": 8.5,
+        "bank_deposit_growth_pct": 9.0
+      },
+
+      "govt_finances": {
+        "fiscal_deficit_pct_gdp": 4.6,
+        "revenue_deficit_pct_gdp": 3.3,
+        "primary_deficit_pct_gdp": 1.3,
+        "govt_debt_pct_gdp": 70.4,
+        "tax_gdp_ratio_pct": 9.9,
+        "capex_pct_gdp": 1.7,
+        "disinvestment_actual_cr": 50304,
+        "gst_annual_collections_cr": 1013000,
+        "corp_tax_cut_bps": 800,
+        "note": "Corporate tax cut ordinance Sep 2019; fiscal deficit missed target"
+      },
+
+      "external_sector": {
+        "current_account_deficit_pct_gdp": -1.0,
+        "current_account_balance_usd_bn": -24.6,
+        "trade_deficit_usd_bn": -157.5,
+        "exports_usd_bn": 330.1,
+        "imports_usd_bn": 487.6,
+        "services_surplus_usd_bn": 83.4,
+        "remittances_usd_bn": 83.3,
+        "fdi_gross_inflow_usd_bn": 73.5,
+        "fdi_net_usd_bn": 43.0,
+        "fpi_net_usd_bn": 14.6,
+        "forex_reserves_end_usd_bn": 477.8,
+        "import_cover_months": 11.9,
+        "external_debt_usd_bn": 558.5,
+        "external_debt_gdp_pct": 19.7
+      },
+
+      "exchange_rate": {
+        "inr_usd_avg": 70.42,
+        "inr_usd_start": 70.2,
+        "inr_usd_end": 75.3,
+        "inr_depreciation_pct": 0.3,
+        "reer_change_pct": -1.5
+      },
+
+      "equity_markets": {
+        "nifty50_open": 10863,
+        "nifty50_close": 12168,
+        "nifty50_high": 12430,
+        "nifty50_low": 10386,
+        "nifty50_return_cy2019_pct": 12.0,
+        "sensex_close": 41254,
+        "nifty_midcap100_return_pct": -3.0,
+        "nifty_smallcap100_return_pct": -7.4,
+        "nifty_pe_ratio_avg": 28.2,
+        "nifty_pb_ratio_avg": 3.5,
+        "nifty_div_yield_pct": 1.2,
+        "sensex_mcap_usd_bn": 2100,
+        "mcap_gdp_ratio_pct": 74.0,
+        "india_vix_avg": 14.5,
+        "india_vix_high": 24.5,
+        "india_vix_low": 10.6,
+        "fii_equity_net_cr": 101123,
+        "dii_equity_net_cr": -16423,
+        "note": "Large-caps led by Sep 2019 corp tax cut rally"
+      },
+
+      "debt_markets": {
+        "gsec_10yr_yield_avg_pct": 6.72,
+        "gsec_10yr_yield_start_pct": 7.58,
+        "gsec_10yr_yield_end_pct": 6.13,
+        "corporate_bond_aaa_spread_bps": 80,
+        "t_bill_91day_avg_pct": 5.85
+      },
+
+      "banking_sector": {
+        "gnpa_ratio_pct": 9.36,
+        "nnpa_ratio_pct": 3.95,
+        "crar_pct": 14.3,
+        "return_on_assets_pct": 0.09,
+        "psb_gnpa_ratio_pct": 11.33,
+        "note": "IBC and resolution improving; NPA ratio declining"
+      },
+
+      "commodities": {
+        "gold_price_inr_10g_avg": 35200,
+        "gold_return_pct": 25.0,
+        "crude_oil_brent_usd_avg": 64.0,
+        "crude_oil_basket_india_usd": 60.5
+      },
+
+      "mutual_funds": {
+        "industry_aum_cr": 2631000,
+        "equity_aum_cr": 863000,
+        "sip_monthly_inflow_cr": 8183,
+        "folios_total_mn": 87.9
+      },
+
+      "iip_unemp": {
+        "iip_growth_pct": -0.1,
+        "manufacturing_growth_pct": -0.8,
+        "unemployment_rate_pct": 5.3
+      },
+
+      "key_events": [
+        "5 RBI rate cuts; repo rate fell 135bps to 5.15%",
+        "Corporate base tax cut 30%→22% (Sep 2019)",
+        "NBFC/HFC stress continued (DHFL collapse)",
+        "General Election result volatility (May 2019)",
+        "Gold surged 25% — safe haven demand"
+      ]
+    },
+
+    "FY2020_21": {
+      "fiscal_year": "FY 2020-21",
+      "calendar_year_approx": "CY 2020",
+
+      "macro": {
+        "real_gdp_growth_pct": -6.6,
+        "nominal_gdp_growth_pct": -1.4,
+        "gdp_usd_bn": 2671,
+        "gdp_inr_lakh_cr": 197.46,
+        "gdp_per_capita_usd": 1920,
+        "gva_growth_pct": -4.2,
+        "agriculture_gva_growth_pct": 3.6,
+        "industry_gva_growth_pct": -7.0,
+        "services_gva_growth_pct": -8.4,
+        "note": "Worst GDP contraction since 1979. COVID-19 nationwide lockdown."
+      },
+
+      "inflation": {
+        "cpi_avg_pct": 6.2,
+        "cpi_food_avg_pct": 9.0,
+        "wpi_avg_pct": 1.3,
+        "core_cpi_pct": 5.5,
+        "rbi_target_pct": 4.0,
+        "note": "CPI breached RBI's 6% upper tolerance band for most of year"
+      },
+
+      "monetary": {
+        "repo_rate_start_pct": 5.15,
+        "repo_rate_end_pct": 4.0,
+        "repo_rate_change_bps": -115,
+        "reverse_repo_rate_end_pct": 3.35,
+        "crr_pct": 3.0,
+        "slr_pct": 18.0,
+        "m3_growth_pct": 12.2,
+        "bank_credit_growth_pct": 5.6,
+        "bank_deposit_growth_pct": 11.4,
+        "rbi_liquidity_injection_cr": 1500000
+      },
+
+      "govt_finances": {
+        "fiscal_deficit_pct_gdp": 9.2,
+        "revenue_deficit_pct_gdp": 7.3,
+        "primary_deficit_pct_gdp": 5.7,
+        "govt_debt_pct_gdp": 89.6,
+        "tax_gdp_ratio_pct": 9.5,
+        "capex_pct_gdp": 2.2,
+        "atmanirbhar_bharat_pkg_cr": 2100000,
+        "disinvestment_actual_cr": 32845,
+        "gst_annual_collections_cr": 1149000
+      },
+
+      "external_sector": {
+        "current_account_deficit_pct_gdp": 0.9,
+        "current_account_balance_usd_bn": 23.9,
+        "trade_deficit_usd_bn": -98.5,
+        "exports_usd_bn": 291.8,
+        "imports_usd_bn": 390.3,
+        "services_surplus_usd_bn": 84.0,
+        "remittances_usd_bn": 83.1,
+        "fdi_gross_inflow_usd_bn": 81.7,
+        "fdi_net_usd_bn": 43.1,
+        "fpi_net_usd_bn": 36.2,
+        "forex_reserves_end_usd_bn": 577.0,
+        "import_cover_months": 18.0,
+        "note": "Current account surplus — rare event; low imports due to lockdown"
+      },
+
+      "exchange_rate": {
+        "inr_usd_avg": 74.18,
+        "inr_usd_start": 75.3,
+        "inr_usd_end": 73.1,
+        "inr_depreciation_pct": 2.5,
+        "inr_peak_weakness": 76.9
+      },
+
+      "equity_markets": {
+        "nifty50_open": 12168,
+        "nifty50_close": 13982,
+        "nifty50_high": 13982,
+        "nifty50_low": 7511,
+        "nifty50_crash_peak_to_trough_pct": -38.0,
+        "nifty50_return_cy2020_pct": 14.9,
+        "sensex_close": 47751,
+        "nifty_midcap100_return_pct": 24.6,
+        "nifty_smallcap100_return_pct": 29.6,
+        "nifty_pe_ratio_avg": 34.0,
+        "nifty_pb_ratio_avg": 3.8,
+        "nifty_div_yield_pct": 1.1,
+        "sensex_mcap_usd_bn": 2444,
+        "mcap_gdp_ratio_pct": 91.5,
+        "india_vix_avg": 25.0,
+        "india_vix_high": 83.6,
+        "india_vix_low": 13.0,
+        "fii_equity_net_cr": 168821,
+        "dii_equity_net_cr": -39999,
+        "demat_accounts_added_mn": 10.5,
+        "note": "India VIX hit 83.6 all-time high in March 2020"
+      },
+
+      "debt_markets": {
+        "gsec_10yr_yield_avg_pct": 6.0,
+        "gsec_10yr_yield_start_pct": 6.13,
+        "gsec_10yr_yield_end_pct": 5.96,
+        "corporate_bond_aaa_spread_bps": 90,
+        "t_bill_91day_avg_pct": 3.60
+      },
+
+      "banking_sector": {
+        "gnpa_ratio_pct": 7.49,
+        "nnpa_ratio_pct": 2.59,
+        "crar_pct": 15.8,
+        "return_on_assets_pct": 0.45,
+        "psb_gnpa_ratio_pct": 9.40,
+        "note": "NPA improved partly due to moratorium & regulatory forbearance"
+      },
+
+      "commodities": {
+        "gold_price_inr_10g_avg": 45500,
+        "gold_return_pct": 28.0,
+        "gold_ath_inr_10g": 56200,
+        "crude_oil_brent_usd_avg": 41.9,
+        "crude_oil_futures_negative_usd": -37.6,
+        "note": "Crude oil WTI futures went negative in April 2020"
+      },
+
+      "mutual_funds": {
+        "industry_aum_cr": 3115000,
+        "equity_aum_cr": 937000,
+        "sip_monthly_inflow_cr": 8023,
+        "sip_registrations_new_mn_monthly": 2.1,
+        "folios_total_mn": 97.5,
+        "new_regime_introduced": "New MF stress test norms"
+      },
+
+      "iip_unemp": {
+        "iip_growth_pct": -8.4,
+        "manufacturing_growth_pct": -10.5,
+        "unemployment_rate_pct": 7.1,
+        "unemployment_rate_peak_pct": 23.5
+      },
+
+      "key_events": [
+        "COVID-19 nationwide lockdown Mar 25",
+        "Nifty crashed 38% peak-to-trough; VIX at 83.6 ATH",
+        "RBI emergency 75bps cut + 40bps; total 115bps cut",
+        "V-shape recovery — Nifty recovered fully by Nov 2020",
+        "Retail investor surge; 10.5mn new demat accounts",
+        "Gold ATH of Rs 56,200/10g (Aug 2020)",
+        "New dual tax regime introduced (Budget)"
+      ]
+    },
+
+    "FY2021_22": {
+      "fiscal_year": "FY 2021-22",
+      "calendar_year_approx": "CY 2021",
+
+      "macro": {
+        "real_gdp_growth_pct": 8.7,
+        "nominal_gdp_growth_pct": 19.5,
+        "gdp_usd_bn": 3170,
+        "gdp_inr_lakh_cr": 236.64,
+        "gdp_per_capita_usd": 2257,
+        "gva_growth_pct": 8.1,
+        "agriculture_gva_growth_pct": 3.3,
+        "industry_gva_growth_pct": 10.7,
+        "services_gva_growth_pct": 8.4
+      },
+
+      "inflation": {
+        "cpi_avg_pct": 5.5,
+        "cpi_food_avg_pct": 4.2,
+        "wpi_avg_pct": 12.5,
+        "core_cpi_pct": 6.0,
+        "rbi_target_pct": 4.0,
+        "note": "WPI at multi-decade high; RBI kept accommodative stance citing growth"
+      },
+
+      "monetary": {
+        "repo_rate_start_pct": 4.0,
+        "repo_rate_end_pct": 4.0,
+        "repo_rate_change_bps": 0,
+        "reverse_repo_rate_end_pct": 3.35,
+        "crr_pct": 4.0,
+        "slr_pct": 18.0,
+        "m3_growth_pct": 9.0,
+        "bank_credit_growth_pct": 9.2,
+        "bank_deposit_growth_pct": 10.1
+      },
+
+      "govt_finances": {
+        "fiscal_deficit_pct_gdp": 6.7,
+        "revenue_deficit_pct_gdp": 4.4,
+        "primary_deficit_pct_gdp": 3.1,
+        "govt_debt_pct_gdp": 84.0,
+        "tax_gdp_ratio_pct": 10.8,
+        "capex_pct_gdp": 2.5,
+        "disinvestment_actual_cr": 13531,
+        "gst_annual_collections_cr": 1302000,
+        "note": "Capex push; disinvestment missed targets badly"
+      },
+
+      "external_sector": {
+        "current_account_deficit_pct_gdp": -1.2,
+        "current_account_balance_usd_bn": -38.8,
+        "trade_deficit_usd_bn": -189.5,
+        "exports_usd_bn": 419.6,
+        "imports_usd_bn": 609.1,
+        "services_surplus_usd_bn": 106.0,
+        "remittances_usd_bn": 87.0,
+        "fdi_gross_inflow_usd_bn": 84.8,
+        "fdi_net_usd_bn": 44.4,
+        "fpi_net_usd_bn": 3.6,
+        "forex_reserves_end_usd_bn": 622.0,
+        "import_cover_months": 13.2
+      },
+
+      "exchange_rate": {
+        "inr_usd_avg": 74.23,
+        "inr_usd_start": 73.1,
+        "inr_usd_end": 74.5,
+        "inr_depreciation_pct": 1.9
+      },
+
+      "equity_markets": {
+        "nifty50_open": 13982,
+        "nifty50_close": 17354,
+        "nifty50_high": 18604,
+        "nifty50_low": 14234,
+        "nifty50_return_cy2021_pct": 24.1,
+        "sensex_close": 58254,
+        "nifty_midcap100_return_pct": 46.6,
+        "nifty_smallcap100_return_pct": 63.4,
+        "nifty_pe_ratio_avg": 40.0,
+        "nifty_pb_ratio_avg": 4.5,
+        "nifty_div_yield_pct": 0.9,
+        "sensex_mcap_usd_bn": 3450,
+        "mcap_gdp_ratio_pct": 108.8,
+        "india_vix_avg": 18.0,
+        "india_vix_high": 31.7,
+        "india_vix_low": 11.9,
+        "fii_equity_net_cr": 25752,
+        "dii_equity_net_cr": -28000,
+        "demat_accounts_added_mn": 26.4,
+        "total_demat_accounts_mn": 89.7,
+        "ipos_raised_cr": 118000,
+        "note": "Nifty crossed 18,000; MCap/GDP above 100%; IPO boom year"
+      },
+
+      "debt_markets": {
+        "gsec_10yr_yield_avg_pct": 6.25,
+        "gsec_10yr_yield_start_pct": 5.96,
+        "gsec_10yr_yield_end_pct": 6.45,
+        "corporate_bond_aaa_spread_bps": 55,
+        "t_bill_91day_avg_pct": 3.82
+      },
+
+      "banking_sector": {
+        "gnpa_ratio_pct": 5.8,
+        "nnpa_ratio_pct": 1.9,
+        "crar_pct": 16.6,
+        "return_on_assets_pct": 0.79,
+        "psb_gnpa_ratio_pct": 7.30,
+        "psb_first_profit_all_cr": 66543
+      },
+
+      "commodities": {
+        "gold_price_inr_10g_avg": 48700,
+        "gold_return_pct": 0.0,
+        "crude_oil_brent_usd_avg": 71.0,
+        "crude_oil_basket_india_usd": 69.4
+      },
+
+      "mutual_funds": {
+        "industry_aum_cr": 3769000,
+        "equity_aum_cr": 1470000,
+        "sip_monthly_inflow_cr": 9891,
+        "folios_total_mn": 124.2,
+        "note": "SIP and folio growth accelerated with retail investor surge"
+      },
+
+      "iip_unemp": {
+        "iip_growth_pct": 11.4,
+        "manufacturing_growth_pct": 12.4,
+        "unemployment_rate_pct": 6.1
+      },
+
+      "key_events": [
+        "India 2nd wave (Delta) April-May 2021 — briefly hit markets",
+        "Nifty crossed 18,000 ATH (Oct 2021)",
+        "IPO boom — Zomato, Paytm, Nykaa listed",
+        "26.4mn new demat accounts added (record)",
+        "All PSBs profitable for first time"
+      ]
+    },
+
+    "FY2022_23": {
+      "fiscal_year": "FY 2022-23",
+      "calendar_year_approx": "CY 2022",
+
+      "macro": {
+        "real_gdp_growth_pct": 7.0,
+        "nominal_gdp_growth_pct": 14.2,
+        "gdp_usd_bn": 3389,
+        "gdp_inr_lakh_cr": 272.41,
+        "gdp_per_capita_usd": 2389
+      },
+
+      "inflation": {
+        "cpi_avg_pct": 6.7,
+        "cpi_food_avg_pct": 7.8,
+        "wpi_avg_pct": 12.5,
+        "core_cpi_pct": 6.1,
+        "rbi_target_pct": 4.0,
+        "cpi_peak_pct": 7.79
+      },
+
+      "monetary": {
+        "repo_rate_start_pct": 4.0,
+        "repo_rate_end_pct": 6.5,
+        "repo_rate_change_bps": 250,
+        "reverse_repo_rate_end_pct": 3.35,
+        "sdf_rate_pct": 6.25,
+        "crr_pct": 4.5,
+        "slr_pct": 18.0,
+        "m3_growth_pct": 9.5,
+        "bank_credit_growth_pct": 15.3,
+        "bank_deposit_growth_pct": 9.7,
+        "note": "Fastest RBI tightening cycle in modern history — 250bps in 12 months"
+      },
+
+      "govt_finances": {
+        "fiscal_deficit_pct_gdp": 6.4,
+        "revenue_deficit_pct_gdp": 3.8,
+        "primary_deficit_pct_gdp": 2.8,
+        "govt_debt_pct_gdp": 81.0,
+        "tax_gdp_ratio_pct": 11.4,
+        "capex_pct_gdp": 2.9,
+        "disinvestment_actual_cr": 65000,
+        "gst_annual_collections_cr": 1497000,
+        "gst_monthly_avg_cr": 124700
+      },
+
+      "external_sector": {
+        "current_account_deficit_pct_gdp": -2.0,
+        "current_account_balance_usd_bn": -67.0,
+        "trade_deficit_usd_bn": -247.5,
+        "exports_usd_bn": 453.0,
+        "imports_usd_bn": 700.5,
+        "services_surplus_usd_bn": 132.4,
+        "remittances_usd_bn": 100.0,
+        "fdi_gross_inflow_usd_bn": 71.4,
+        "fdi_net_usd_bn": 28.0,
+        "fpi_net_usd_bn": -16.5,
+        "forex_reserves_end_usd_bn": 578.0,
+        "import_cover_months": 9.8,
+        "external_debt_usd_bn": 624.7,
+        "external_debt_gdp_pct": 18.4
+      },
+
+      "exchange_rate": {
+        "inr_usd_avg": 79.81,
+        "inr_usd_start": 74.5,
+        "inr_usd_end": 82.7,
+        "inr_depreciation_pct": 10.9,
+        "inr_ath_weakness": 83.0,
+        "reer_change_pct": -5.2
+      },
+
+      "equity_markets": {
+        "nifty50_open": 17354,
+        "nifty50_close": 18105,
+        "nifty50_high": 18887,
+        "nifty50_low": 15183,
+        "nifty50_return_cy2022_pct": 4.3,
+        "nifty50_vs_sp500_outperformance_pct": 22.4,
+        "sensex_close": 60841,
+        "nifty_midcap100_return_pct": 0.5,
+        "nifty_smallcap100_return_pct": -6.8,
+        "nifty_pe_ratio_avg": 22.5,
+        "nifty_pb_ratio_avg": 3.8,
+        "nifty_div_yield_pct": 1.2,
+        "sensex_mcap_usd_bn": 3265,
+        "mcap_gdp_ratio_pct": 96.3,
+        "india_vix_avg": 19.0,
+        "india_vix_high": 33.7,
+        "india_vix_low": 13.2,
+        "fii_equity_net_cr": -121441,
+        "dii_equity_net_cr": 197600,
+        "total_demat_accounts_mn": 102.3,
+        "note": "India significantly outperformed global markets — resilient domestic demand"
+      },
+
+      "debt_markets": {
+        "gsec_10yr_yield_avg_pct": 7.34,
+        "gsec_10yr_yield_start_pct": 6.45,
+        "gsec_10yr_yield_end_pct": 7.33,
+        "corporate_bond_aaa_spread_bps": 65,
+        "t_bill_91day_avg_pct": 6.68
+      },
+
+      "banking_sector": {
+        "gnpa_ratio_pct": 5.0,
+        "nnpa_ratio_pct": 1.28,
+        "crar_pct": 16.8,
+        "return_on_assets_pct": 1.0,
+        "psb_gnpa_ratio_pct": 6.00,
+        "credit_growth_pct": 15.3,
+        "note": "Banking sector healthiest since 2012; NPA at decade low"
+      },
+
+      "commodities": {
+        "gold_price_inr_10g_avg": 52500,
+        "gold_return_pct": 13.0,
+        "crude_oil_brent_usd_avg": 99.0,
+        "crude_oil_basket_india_usd": 97.4,
+        "note": "Russia-Ukraine war spiked crude to $139/barrel"
+      },
+
+      "mutual_funds": {
+        "industry_aum_cr": 3997000,
+        "equity_aum_cr": 1566000,
+        "sip_monthly_inflow_cr": 12976,
+        "folios_total_mn": 140.7,
+        "note": "SIP crossed Rs 12,000 cr/month milestone"
+      },
+
+      "iip_unemp": {
+        "iip_growth_pct": 5.1,
+        "manufacturing_growth_pct": 4.7,
+        "unemployment_rate_pct": 7.3
+      },
+
+      "key_events": [
+        "Russia invades Ukraine Feb 24 — commodity shock",
+        "RBI emergency off-cycle hike 40bps May 4",
+        "250bps total hike — repo from 4% to 6.5%",
+        "FIIs sold record Rs 1.21 lakh crore — DIIs absorbed",
+        "Crypto/VDA taxed at 30% flat (Budget 2022)",
+        "Debt MF LTCG indexation benefit removed (Budget)"
+      ]
+    },
+
+    "FY2023_24": {
+      "fiscal_year": "FY 2023-24",
+      "calendar_year_approx": "CY 2023",
+
+      "macro": {
+        "real_gdp_growth_pct": 8.2,
+        "nominal_gdp_growth_pct": 9.6,
+        "gdp_usd_bn": 3730,
+        "gdp_inr_lakh_cr": 296.58,
+        "gdp_per_capita_usd": 2600,
+        "gva_growth_pct": 7.7,
+        "agriculture_gva_growth_pct": 1.4,
+        "industry_gva_growth_pct": 9.9,
+        "services_gva_growth_pct": 7.5,
+        "note": "Strongest GDP growth since FY22. Manufacturing and investment led."
+      },
+
+      "inflation": {
+        "cpi_avg_pct": 5.4,
+        "cpi_food_avg_pct": 7.5,
+        "wpi_avg_pct": 0.7,
+        "core_cpi_pct": 4.3,
+        "rbi_target_pct": 4.0
+      },
+
+      "monetary": {
+        "repo_rate_start_pct": 6.5,
+        "repo_rate_end_pct": 6.5,
+        "repo_rate_change_bps": 0,
+        "reverse_repo_rate_end_pct": 3.35,
+        "sdf_rate_pct": 6.25,
+        "crr_pct": 4.5,
+        "slr_pct": 18.0,
+        "m3_growth_pct": 11.1,
+        "bank_credit_growth_pct": 16.5,
+        "bank_deposit_growth_pct": 13.5
+      },
+
+      "govt_finances": {
+        "fiscal_deficit_pct_gdp": 5.6,
+        "revenue_deficit_pct_gdp": 2.6,
+        "primary_deficit_pct_gdp": 2.0,
+        "govt_debt_pct_gdp": 81.0,
+        "tax_gdp_ratio_pct": 11.7,
+        "capex_pct_gdp": 3.3,
+        "disinvestment_actual_cr": 16507,
+        "gst_annual_collections_cr": 2018000,
+        "gst_monthly_avg_cr": 168000,
+        "note": "GST collections crossed Rs 2 lakh crore for first time"
+      },
+
+      "external_sector": {
+        "current_account_deficit_pct_gdp": -1.2,
+        "current_account_balance_usd_bn": -23.2,
+        "trade_deficit_usd_bn": -244.9,
+        "exports_usd_bn": 437.1,
+        "imports_usd_bn": 682.0,
+        "services_surplus_usd_bn": 162.8,
+        "remittances_usd_bn": 111.2,
+        "fdi_gross_inflow_usd_bn": 71.3,
+        "fdi_net_usd_bn": 10.2,
+        "fpi_net_usd_bn": 44.1,
+        "forex_reserves_end_usd_bn": 645.6,
+        "import_cover_months": 11.3,
+        "external_debt_usd_bn": 645.0,
+        "external_debt_gdp_pct": 17.3
+      },
+
+      "exchange_rate": {
+        "inr_usd_avg": 83.01,
+        "inr_usd_start": 82.7,
+        "inr_usd_end": 83.4,
+        "inr_depreciation_pct": 0.4,
+        "reer_change_pct": 0.8,
+        "note": "INR among most stable EM currencies"
+      },
+
+      "equity_markets": {
+        "nifty50_open": 18105,
+        "nifty50_close": 21731,
+        "nifty50_high": 21964,
+        "nifty50_low": 16828,
+        "nifty50_return_cy2023_pct": 20.0,
+        "sensex_close": 72241,
+        "nifty_midcap100_return_pct": 46.5,
+        "nifty_smallcap100_return_pct": 55.0,
+        "nifty_pe_ratio_avg": 23.5,
+        "nifty_pb_ratio_avg": 4.0,
+        "nifty_div_yield_pct": 1.2,
+        "sensex_mcap_usd_bn": 4050,
+        "mcap_gdp_ratio_pct": 108.6,
+        "india_vix_avg": 12.5,
+        "india_vix_high": 19.8,
+        "india_vix_low": 10.1,
+        "fii_equity_net_cr": 171102,
+        "dii_equity_net_cr": -27700,
+        "total_demat_accounts_mn": 139.4,
+        "ipos_raised_cr": 49436,
+        "india_mcap_global_rank": 4,
+        "note": "Nifty crossed 20,000; India became 4th largest stock market globally"
+      },
+
+      "debt_markets": {
+        "gsec_10yr_yield_avg_pct": 7.15,
+        "gsec_10yr_yield_start_pct": 7.33,
+        "gsec_10yr_yield_end_pct": 7.06,
+        "corporate_bond_aaa_spread_bps": 55,
+        "t_bill_91day_avg_pct": 6.75,
+        "india_jpmorgan_gbi_inclusion": "India included in JPMorgan GBI-EM index Jun 2024 (announced Oct 2023)"
+      },
+
+      "banking_sector": {
+        "gnpa_ratio_pct": 2.8,
+        "nnpa_ratio_pct": 0.66,
+        "crar_pct": 16.8,
+        "return_on_assets_pct": 1.27,
+        "return_on_equity_pct": 12.5,
+        "psb_gnpa_ratio_pct": 3.66,
+        "psb_net_profit_cr": 141203,
+        "credit_growth_pct": 16.5
+      },
+
+      "commodities": {
+        "gold_price_inr_10g_avg": 59500,
+        "gold_return_pct": 15.0,
+        "crude_oil_brent_usd_avg": 82.0,
+        "crude_oil_basket_india_usd": 80.6
+      },
+
+      "mutual_funds": {
+        "industry_aum_cr": 5300000,
+        "equity_aum_cr": 2330000,
+        "sip_monthly_inflow_cr": 17073,
+        "total_sip_accounts_mn": 85.0,
+        "folios_total_mn": 174.0,
+        "note": "SIP crossed Rs 17,000 cr/month; industry AUM crossed Rs 50 lakh crore"
+      },
+
+      "iip_unemp": {
+        "iip_growth_pct": 5.9,
+        "manufacturing_growth_pct": 5.5,
+        "unemployment_rate_pct": 8.0
+      },
+
+      "key_events": [
+        "Nifty crosses 20,000 (Sep 2023)",
+        "India becomes 4th largest stock market globally",
+        "JPMorgan GBI-EM inclusion announced Oct 2023",
+        "SVB collapse Mar 2023 — minimal India impact",
+        "New tax regime made default from FY2023-24",
+        "GST crossed Rs 2 lakh crore monthly first time"
+      ]
+    },
+
+    "FY2024_25": {
+      "fiscal_year": "FY 2024-25",
+      "calendar_year_approx": "CY 2024",
+
+      "macro": {
+        "real_gdp_growth_pct": 6.5,
+        "nominal_gdp_growth_pct": 9.6,
+        "gdp_usd_bn": 3910,
+        "gdp_inr_lakh_cr": 330.68,
+        "gdp_per_capita_usd": 2731,
+        "gva_growth_pct": 6.4,
+        "agriculture_gva_growth_pct": 4.6,
+        "industry_gva_growth_pct": 7.7,
+        "services_gva_growth_pct": 7.0
+      },
+
+      "inflation": {
+        "cpi_avg_pct": 4.7,
+        "cpi_food_avg_pct": 7.1,
+        "wpi_avg_pct": 2.3,
+        "core_cpi_pct": 3.4,
+        "rbi_target_pct": 4.0,
+        "note": "Food inflation remained elevated; core eased"
+      },
+
+      "monetary": {
+        "repo_rate_start_pct": 6.5,
+        "repo_rate_end_pct": 6.25,
+        "repo_rate_change_bps": -25,
+        "reverse_repo_rate_end_pct": 3.35,
+        "sdf_rate_pct": 6.0,
+        "crr_pct": 4.0,
+        "slr_pct": 18.0,
+        "m3_growth_pct": 9.8,
+        "bank_credit_growth_pct": 12.4,
+        "bank_deposit_growth_pct": 11.4,
+        "note": "First rate cut Feb 2025 after 4.5 years"
+      },
+
+      "govt_finances": {
+        "fiscal_deficit_pct_gdp": 4.8,
+        "revenue_deficit_pct_gdp": 2.0,
+        "primary_deficit_pct_gdp": 1.3,
+        "govt_debt_pct_gdp": 80.0,
+        "tax_gdp_ratio_pct": 11.9,
+        "capex_pct_gdp": 3.4,
+        "disinvestment_actual_cr": 33000,
+        "gst_annual_collections_cr": 2207000,
+        "gst_monthly_avg_cr": 183000
+      },
+
+      "external_sector": {
+        "current_account_deficit_pct_gdp": -1.0,
+        "current_account_balance_usd_bn": -23.7,
+        "trade_deficit_usd_bn": -287.2,
+        "exports_usd_bn": 437.5,
+        "imports_usd_bn": 724.7,
+        "services_surplus_usd_bn": 188.8,
+        "remittances_usd_bn": 118.7,
+        "fdi_gross_inflow_usd_bn": 80.6,
+        "fdi_net_usd_bn": 1.0,
+        "fpi_net_usd_bn": 3.6,
+        "forex_reserves_peak_usd_bn": 704.9,
+        "forex_reserves_end_usd_bn": 625.0,
+        "import_cover_months": 10.4,
+        "note": "FPI net near flat after massive outflows Oct 2024-Feb 2025"
+      },
+
+      "exchange_rate": {
+        "inr_usd_avg": 84.06,
+        "inr_usd_start": 83.4,
+        "inr_usd_end": 86.5,
+        "inr_depreciation_pct": 3.7,
+        "inr_ath_weakness": 87.5,
+        "reer_change_pct": -2.0
+      },
+
+      "equity_markets": {
+        "nifty50_open": 21731,
+        "nifty50_ath": 26277,
+        "nifty50_ath_date": "2024-09-26",
+        "nifty50_close_cy2024": 23645,
+        "nifty50_return_cy2024_pct": 8.8,
+        "nifty50_drawdown_from_ath_pct": -12.0,
+        "sensex_close": 78140,
+        "sensex_ath": 85978,
+        "nifty_midcap100_return_pct": 23.5,
+        "nifty_smallcap100_return_pct": 24.5,
+        "nifty_pe_ratio_avg": 23.0,
+        "nifty_pb_ratio_avg": 3.9,
+        "nifty_div_yield_pct": 1.2,
+        "sensex_mcap_usd_bn": 4340,
+        "mcap_gdp_ratio_pct": 111.1,
+        "india_vix_avg": 14.2,
+        "india_vix_high": 26.3,
+        "india_vix_low": 11.0,
+        "fii_equity_net_fy_cr": -112000,
+        "dii_equity_net_fy_cr": 528000,
+        "total_demat_accounts_mn": 181.4,
+        "sip_monthly_high_cr": 26459,
+        "ipos_raised_cr": 179500,
+        "india_ipos_global_share_pct": 30,
+        "note": "ATH in Sep; FPI sold record; India's IPO share 30% of global listings"
+      },
+
+      "debt_markets": {
+        "gsec_10yr_yield_avg_pct": 7.05,
+        "gsec_10yr_yield_start_pct": 7.06,
+        "gsec_10yr_yield_end_pct": 6.68,
+        "corporate_bond_aaa_spread_bps": 50,
+        "t_bill_91day_avg_pct": 6.6,
+        "jpmorgan_gbi_inclusion_wt_pct": 1.0,
+        "note": "India GBI-EM inclusion began Jun 2024 (max 10% weight phased over 10 months)"
+      },
+
+      "banking_sector": {
+        "gnpa_ratio_pct": 2.6,
+        "nnpa_ratio_pct": 0.55,
+        "crar_pct": 17.1,
+        "return_on_assets_pct": 1.3,
+        "return_on_equity_pct": 13.2,
+        "psb_gnpa_ratio_pct": 3.16,
+        "credit_growth_pct": 12.4,
+        "note": "GNPA at 12-year low of 2.6%"
+      },
+
+      "commodities": {
+        "gold_price_inr_10g_avg": 70000,
+        "gold_ath_inr_10g": 81200,
+        "gold_return_pct": 19.0,
+        "gold_ath_date": "2024-10",
+        "crude_oil_brent_usd_avg": 80.0,
+        "crude_oil_basket_india_usd": 78.6
+      },
+
+      "mutual_funds": {
+        "industry_aum_cr": 6640000,
+        "equity_aum_cr": 3200000,
+        "sip_monthly_inflow_cr_avg": 23100,
+        "sip_monthly_inflow_cr_high": 26459,
+        "total_sip_accounts_mn": 101.0,
+        "folios_total_mn": 217.0,
+        "note": "MF industry AUM crossed Rs 66 lakh crore"
+      },
+
+      "iip_unemp": {
+        "iip_growth_pct": 4.2,
+        "manufacturing_growth_pct": 4.0,
+        "unemployment_rate_pct": 7.8
+      },
+
+      "key_events": [
+        "Nifty ATH 26,277 (Sep 26 2024)",
+        "FPI sold record Rs 1.12 lakh crore equity (Oct-Feb)",
+        "Election results Jun 4 — Nifty fell 4.7% single day",
+        "Budget 2024: STCG 15%→20%; LTCG 10%→12.5%",
+        "RBI first cut Feb 2025 (25bps to 6.25%)",
+        "India IPOs: 30% of global listings",
+        "JPMorgan GBI-EM inclusion started Jun 2024",
+        "SIP high of Rs 26,459 crore (Jan 2025)"
+      ]
+    },
+
+    "FY2025_26": {
+      "fiscal_year": "FY 2025-26",
+      "calendar_year_approx": "CY 2025 (partial)",
+      "status": "Ongoing — data through April 2026",
+
+      "macro": {
+        "real_gdp_growth_fy26_est_pct": 7.4,
+        "nominal_gdp_growth_pct": 8.0,
+        "gdp_usd_bn_est": 4240,
+        "gdp_inr_lakh_cr_est": 357.14,
+        "gdp_per_capita_usd_est": 2950,
+        "q1_fy26_gdp_pct": 7.8,
+        "q2_fy26_gdp_pct": 8.2,
+        "fy27_gdp_forecast_pct": 6.8
+      },
+
+      "inflation": {
+        "cpi_apr_2025_pct": 3.2,
+        "cpi_jul_2025_pct": 1.6,
+        "cpi_dec_2025_pct": 1.33,
+        "cpi_fy26_avg_est_pct": 2.1,
+        "wpi_fy26_avg_pct": -0.5,
+        "rbi_target_pct": 4.0,
+        "rbi_inflation_band_pct": "2-6%",
+        "note": "Inflation at 8-year low; well below RBI's lower tolerance"
+      },
+
+      "monetary": {
+        "repo_rate_start_pct": 6.25,
+        "repo_rate_end_dec2025_pct": 5.25,
+        "repo_rate_apr2026_pct": 5.25,
+        "total_cuts_fy26_bps": -125,
+        "rate_actions": [
+          {"date":"2025-02-07","rate":6.25,"bps":-25},
+          {"date":"2025-04-09","rate":6.0,"bps":-25},
+          {"date":"2025-06-06","rate":5.5,"bps":-50},
+          {"date":"2025-08-06","rate":5.5,"bps":0},
+          {"date":"2025-10-01","rate":5.5,"bps":0},
+          {"date":"2025-12-05","rate":5.25,"bps":-25},
+          {"date":"2026-02-06","rate":5.25,"bps":0},
+          {"date":"2026-04-08","rate":5.25,"bps":0}
+        ],
+        "sdf_rate_pct": 5.0,
+        "msf_rate_pct": 5.5,
+        "crr_pct": 4.0,
+        "m3_growth_pct_est": 10.5,
+        "bank_credit_growth_pct": 14.5,
+        "note": "125bps easing in FY26 — most aggressive since 2019"
+      },
+
+      "govt_finances": {
+        "fiscal_deficit_pct_gdp_target": 4.4,
+        "fiscal_deficit_pct_gdp_est": 4.4,
+        "revenue_deficit_pct_gdp_est": 1.5,
+        "capex_pct_gdp": 3.4,
+        "gst_monthly_avg_est_cr": 190000,
+        "new_income_tax_act_2025": "Replaces 1961 Act; effective Apr 1 2026",
+        "tax_rebate_87A_new_regime_limit": 1200000
+      },
+
+      "external_sector": {
+        "h1_fy26_current_account_deficit_pct_gdp": -0.8,
+        "forex_reserves_feb2026_peak_usd_bn": 728.5,
+        "forex_reserves_mar2026_usd_bn": 688.1,
+        "forex_reserves_apr2026_est_usd_bn": 675.0,
+        "import_cover_months_est": 11.0,
+        "fpi_fy26_net_equity_usd_bn": -16.6,
+        "note": "FPI outflows FY26 worst since 1991"
+      },
+
+      "exchange_rate": {
+        "inr_usd_apr2025": 84.0,
+        "inr_usd_sep2025_approx": 86.5,
+        "inr_usd_mar2026": 87.0,
+        "inr_usd_apr2026": 86.5,
+        "rbi_forward_book_short_usd_bn": 77.25,
+        "note": "INR weakened; RBI active in forward book"
+      },
+
+      "equity_markets": {
+        "nifty50_start_fy26": 23519,
+        "nifty50_as_of_apr2026": 22500,
+        "nifty50_drawdown_from_ath_pct": -14.3,
+        "india_vix_apr2026": 18.85,
+        "india_vix_52wk_high": 28.91,
+        "india_vix_52wk_low": 8.72,
+        "nifty_pe_ratio_current": 20.5,
+        "nifty_1yr_return_pct": -1.0,
+        "nifty_3yr_cagr_pct": 10.12,
+        "nifty_5yr_cagr_pct": 9.55,
+        "nifty_10yr_cagr_pct": 11.60,
+        "nifty_20yr_cagr_pct_approx": 10.9,
+        "total_demat_accounts_mn_est": 195.0,
+        "fpi_net_equity_mar2026_cr": -112000,
+        "sip_monthly_inflow_cr_current": 25000,
+        "note": "FY27 start — markets below ATH; RBI on hold at 5.25%"
+      },
+
+      "debt_markets": {
+        "gsec_10yr_yield_mar2026_pct": 6.65,
+        "gsec_10yr_yield_apr2026_pct": 6.60,
+        "corporate_bond_aaa_spread_bps": 45,
+        "t_bill_91day_pct": 5.95,
+        "jpmorgan_gbi_weight_current_pct": 3.5,
+        "bloomberg_em_lcl_inclusion_pct": 10.0
+      },
+
+      "banking_sector": {
+        "gnpa_ratio_sep2025_pct": 2.15,
+        "gnpa_historic_low": true,
+        "nnpa_ratio_pct": 0.5,
+        "crar_pct": 17.0,
+        "credit_growth_pct": 14.5,
+        "deposit_growth_pct": 11.1
+      },
+
+      "commodities": {
+        "gold_price_inr_10g_apr2026": 87000,
+        "gold_return_fy26_pct": 16.0,
+        "crude_oil_brent_usd_avg_fy26": 72.0,
+        "crude_oil_basket_india_usd": 70.0,
+        "note": "Gold at all-time highs globally ($3000+ USD)"
+      },
+
+      "mutual_funds": {
+        "industry_aum_cr_est": 6800000,
+        "equity_aum_cr_est": 3000000,
+        "sip_monthly_inflow_cr_est": 25000,
+        "total_sip_accounts_mn_est": 105.0,
+        "folios_total_mn_est": 225.0
+      },
+
+      "key_events": [
+        "New Income Tax Act 2025 effective Apr 1 2026",
+        "RBI cut 125bps in FY26 (aggressive easing)",
+        "FPI sold record since 1991 — domestic investors cushioned",
+        "US Liberation Day tariffs Apr 2 — India relatively insulated",
+        "Nifty 20-year CAGR near 10-year low (~10%)",
+        "India ranked 4th largest economy (nominal GDP)",
+        "RBI forex reserves hit $728.5bn (Feb 2026 peak) then fell $40bn+",
+        "Gold at Rs 87,000+/10g — multi-decade high"
+      ]
+    }
+  },
+
+  "cross_year_summary": {
+    "nifty50_calendar_year_returns": {
+      "2015": -4.1, "2016": 3.0, "2017": 28.6, "2018": 3.2,
+      "2019": 12.0, "2020": 14.9, "2021": 24.1, "2022": 4.3,
+      "2023": 20.0, "2024": 8.8, "2025": null
+    },
+    "nifty50_10yr_cagr_2015_2024_pct": 11.6,
+    "repo_rate_range_2015_2026": { "peak_pct": 7.75, "trough_pct": 4.0, "current_pct": 5.25 },
+    "cpi_range_2015_2026": { "peak_pct": 7.79, "trough_pct": 1.33, "avg_pct": 5.0 },
+    "inr_usd_range": { "strongest": 63.0, "weakest": 87.5, "current": 86.5 },
+    "forex_reserves_range_usd_bn": { "low_2015": 330, "peak_2026": 728.5, "current": 688 },
+    "gnpa_ratio_range_pct": { "peak": 11.18, "current": 2.15 },
+    "rbi_total_cuts_bps_2015_2019": -335,
+    "rbi_total_hikes_bps_2022": 250,
+    "rbi_total_cuts_bps_2025": 125,
+    "india_mcap_usd_bn": { "2015": 1517, "2021": 3450, "2023": 4050, "2024": 4340 },
+    "total_demat_accounts_mn": { "2015": 23, "2020": 40, "2022": 102, "2024": 181, "2026e": 195 },
+    "sip_monthly_inflow_cr": { "2015": 3121, "2018": 7727, "2021": 9891, "2023": 17073, "2024": 26459 },
+    "gsec_10yr_yield": { "2015": 7.82, "2020": 6.0, "2022": 7.34, "2025": 6.60 },
+    "gdp_usd_bn": { "2015": 2103, "2019": 2836, "2021": 3170, "2024": 3910, "2026e": 4240 }
+  }
+}

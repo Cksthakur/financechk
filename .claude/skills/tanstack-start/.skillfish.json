@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "tanstack-start",
+  "owner": "jezweb",
+  "repo": "claude-skills",
+  "path": "plugins/cloudflare/skills/tanstack-start",
+  "branch": "main",
+  "sha": "30db8f4b93a421e613f757eb54b70911cb1d8547",
+  "source": "manual"
+}
